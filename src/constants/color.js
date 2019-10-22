@@ -5,5 +5,6 @@ export default {
     '--font-gray-3': '#84898e',
     '--font-white': '#fff',
     '--font-black': '#27292e',
-    '--primary': '#e83b35'
+    '--primary': '#e83b35',
+    '--card-bg': '#35363b'
 }

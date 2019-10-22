@@ -1,60 +1,63 @@
 <template>
-    <v-card class="mx-auto">
-        <v-container>
-            <div class="about-content">
-                <div class="about-image">
-                    <v-img
-                        height="350"
-                        width="295"
-                        src="https://cdn.vuetifyjs.com/images/cards/store.jpg"
-                    ></v-img>
-                </div>
-                <div class="about-info">
-                    <div class="about-preword">HELLO</div>
-                    <p>
-                        I'm
-                        <span>Robert Smith</span>
-                    </p>
-                    <p>Developer and Startup enterpreneur</p>
-
-                    <v-divider></v-divider>
-
-                    <ul class="about-list">
-                        <li>
-                            <div class="about-title">AGE</div>
-                            <span class="about-value">29</span>
-                        </li>
-                        <li>
-                            <div class="about-title">AGE</div>
-                            <span class="about-value">29</span>
-                        </li>
-                        <li>
-                            <div class="about-title">AGE</div>
-                            <span class="about-value">29</span>
-                        </li>
-                        <li>
-                            <div class="about-title">AGE</div>
-                            <span class="about-value">29</span>
-                        </li>
-                        <li>
-                            <div class="about-title">AGE</div>
-                            <span class="about-value">29</span>
-                        </li>
-                    </ul>
-                </div>
+    <v-card class="mx-auto" :color="cardBg">
+        <div class="about-content">
+            <div class="about-image">
+                <v-img
+                    height="350"
+                    width="295"
+                    src="https://cdn.vuetifyjs.com/images/cards/store.jpg"
+                ></v-img>
             </div>
-            <div class="about-social">
-                <v-icon>mdi-chef-hat</v-icon>
-                <v-icon>mdi-chef-hat</v-icon>
-                <v-icon>mdi-chef-hat</v-icon>
-                <v-icon>mdi-chef-hat</v-icon>
-                <v-icon>mdi-chef-hat</v-icon>
+            <div class="about-info">
+                <div class="about-preword">HELLO</div>
+                <p>
+                    I'm
+                    <span>Robert Smith</span>
+                </p>
+                <p>Developer and Startup enterpreneur</p>
+
+                <v-divider></v-divider>
+
+                <ul class="about-list">
+                    <li>
+                        <div class="about-title">AGE</div>
+                        <span class="about-value">29</span>
+                    </li>
+                    <li>
+                        <div class="about-title">AGE</div>
+                        <span class="about-value">29</span>
+                    </li>
+                    <li>
+                        <div class="about-title">AGE</div>
+                        <span class="about-value">29</span>
+                    </li>
+                    <li>
+                        <div class="about-title">AGE</div>
+                        <span class="about-value">29</span>
+                    </li>
+                    <li>
+                        <div class="about-title">AGE</div>
+                        <span class="about-value">29</span>
+                    </li>
+                </ul>
             </div>
-        </v-container>
+        </div>
+        <div class="about-social">
+            <v-icon>mdi-github-circle</v-icon>
+            <v-icon>mdi-twitter-circle</v-icon>
+            <v-icon>mdi-facebook</v-icon>
+            <v-icon>mdi-blogger</v-icon>
+            <v-icon>mdi-instagram</v-icon>
+        </div>
     </v-card>
 </template>
 <script>
 export default {
+    computed: {
+        cardBg() {
+            return this.$color['--card-bg']
+        }
+    },
     data() {
         return {
             infos: [
@@ -87,6 +90,7 @@ export default {
 <style scoped>
 .about-content {
     display: flex;
+    padding: 57px 50px 15px 50px;
 }
 
 .about-image {
@@ -128,6 +132,18 @@ export default {
 }
 .about-list li .about-title {
     width: 120px;
+}
+
+.about-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    height: 75px;
+}
+
+.about-social i {
+    margin-right: 42px;
 }
 
 @media screen and (max-width: 960px) {
