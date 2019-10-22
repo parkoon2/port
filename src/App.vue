@@ -1,28 +1,31 @@
 <template>
     <v-app>
-        <nav-drawer></nav-drawer>
-        <v-content>
-            <v-container class="fill-height" fluid>
-                <router-view></router-view>
-            </v-container>
-        </v-content>
-
-        <app-footer></app-footer>
+        <app-bar></app-bar>
     </v-app>
 </template>
-
 <script>
-import NavDrawer from '@/components/navbar/NavDrawer'
-import AppFooter from '@/components/shared/Footer'
-
+import AppBar from '@/components/appbar/AppBar'
 export default {
-    name: 'App',
-    components: {
-        NavDrawer,
-        AppFooter
-    },
+    components: { AppBar },
     data: () => ({
-        //
+        collapseOnScroll: true,
+        menu: [
+            {
+                title: 'home'
+            },
+            {
+                title: 'about'
+            },
+            {
+                title: 'skills'
+            },
+            {
+                title: 'works'
+            },
+            {
+                title: 'contact'
+            }
+        ]
     })
 }
 </script>
