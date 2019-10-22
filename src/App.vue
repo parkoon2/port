@@ -2,7 +2,7 @@
     <v-app>
         <app-bar></app-bar>
 
-        <v-content>
+        <v-content :style="{backgroundColor: bodyBg}">
             <v-container class="fill-height">
                 <!-- About card -->
                 <v-row justify="center" align="center">
@@ -53,6 +53,7 @@ import MyWork from '@/components/work/MyWork'
 import EducationTimeline from '@/components/timeline/EducationTimeline'
 import WorkDetail from '@/components/work/WorkDetail'
 import AppFooter from '@/components/shared/AppFooter'
+
 export default {
     components: {
         AppBar,
@@ -62,6 +63,11 @@ export default {
         EducationTimeline,
         WorkDetail,
         AppFooter
+    },
+    computed: {
+        bodyBg() {
+            return this.$color['--body-bg']
+        }
     },
     data: () => ({})
 }
