@@ -83,6 +83,10 @@ export default {
                     to: '/works'
                 },
                 {
+                    title: 'timeline',
+                    to: '/timeline'
+                },
+                {
                     title: 'contact',
                     to: '/contact'
                 }

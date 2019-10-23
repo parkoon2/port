@@ -6,6 +6,7 @@ import About from '../views/About'
 import Work from '../views/Work'
 import Contact from '../views/Contact'
 import Skill from '../views/Skill'
+import TimeLine from '../views/TimeLine'
 
 Vue.use(VueRouter)
 
@@ -26,14 +27,19 @@ const routes = [
         component: Contact
     },
     {
-        path: '/skill',
-        name: 'skill',
+        path: '/skills',
+        name: 'skills',
         component: Skill
     },
     {
-        path: '/work',
-        name: 'work',
+        path: '/works',
+        name: 'works',
         component: Work
+    },
+    {
+        path: '/timeline',
+        name: 'timline',
+        component: TimeLine
     }
 ]
 
