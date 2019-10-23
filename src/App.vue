@@ -2,12 +2,12 @@
     <v-app>
         <app-bar></app-bar>
 
-        <v-content :style="{backgroundColor: bodyBg}">
-            <v-container class="fill-height">
+        <v-content :style="{backgroundColor: bodyBg}" class="content">
+            <v-container pa-5>
                 <router-view></router-view>
             </v-container>
         </v-content>
-        <app-footer></app-footer>
+        <!-- <app-footer></app-footer> -->
     </v-app>
 </template>
 <script>
@@ -37,3 +37,10 @@ export default {
     data: () => ({})
 }
 </script>
+<style scoped>
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</style>

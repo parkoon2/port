@@ -127,7 +127,7 @@ export default {
 .about-preword {
     position: relative;
     display: inline-block;
-    background: red;
+    background: var(--primary);
     padding: 3px 7px;
     font-weight: bold;
     margin-bottom: 24px;
@@ -143,7 +143,7 @@ export default {
     border-style: solid;
     border-width: 0px 0px 8px 8px;
     border-color: transparent;
-    border-left-color: #e83b35;
+    border-left-color: var(--primary);
 }
 
 .about-list {

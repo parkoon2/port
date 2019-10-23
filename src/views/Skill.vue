@@ -1,14 +1,8 @@
 <template>
+    <!-- Skill Card -->
     <div class="skill">
-        <!-- Skill Card -->
-
-        <!-- Work -->
-        <v-row justify="center" align="center" class="flex-column">
-            <h2>work</h2>
-            <v-col>
-                <skill-card></skill-card>
-            </v-col>
-        </v-row>
+        <h2 class="page-title">Professional Skills</h2>
+        <skill-card></skill-card>
     </div>
 </template>
 
@@ -19,3 +13,15 @@ export default {
     components: { SkillCard }
 }
 </script>
+<style scoped>
+.skill {
+    width: 70%;
+    margin: 0 auto;
+}
+.page-title {
+    color: var(--font-gray-3);
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 27px;
+}
+</style>
