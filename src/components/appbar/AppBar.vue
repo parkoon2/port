@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="app-bar">
         <v-app-bar :color="bgColor" dark>
             <v-toolbar-title class="logo">LOGO</v-toolbar-title>
 
@@ -81,15 +81,15 @@ export default {
                 {
                     title: 'works',
                     to: '/works'
-                },
-                {
-                    title: 'timeline',
-                    to: '/timeline'
-                },
-                {
-                    title: 'contact',
-                    to: '/contact'
                 }
+                // {
+                //     title: 'timeline',
+                //     to: '/timeline'
+                // },
+                // {
+                //     title: 'contact',
+                //     to: '/contact'
+                // }
             ]
         }
     },
@@ -102,6 +102,9 @@ export default {
 </script>
 
 <style scoped>
+.app-bar {
+    z-index: 10;
+}
 .logo {
     margin-left: 12px;
 }
