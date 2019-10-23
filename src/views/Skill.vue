@@ -15,7 +15,7 @@ export default {
 </script>
 <style scoped>
 .skill {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
 }
 .page-title {
