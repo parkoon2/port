@@ -10,44 +10,26 @@
             </div>
             <div class="about-info">
                 <div class="about-preword">HELLO</div>
-                <p>
+                <p class="about-title">
                     I'm
                     <span>Robert Smith</span>
                 </p>
-                <p>Developer and Startup enterpreneur</p>
+                <p class="about-subtitle">Developer and Startup enterpreneur</p>
 
-                <v-divider></v-divider>
+                <v-divider :color="lightGray"></v-divider>
 
                 <ul class="about-list">
-                    <li>
-                        <div class="about-title">AGE</div>
-                        <span class="about-value">29</span>
-                    </li>
-                    <li>
-                        <div class="about-title">AGE</div>
-                        <span class="about-value">29</span>
-                    </li>
-                    <li>
-                        <div class="about-title">AGE</div>
-                        <span class="about-value">29</span>
-                    </li>
-                    <li>
-                        <div class="about-title">AGE</div>
-                        <span class="about-value">29</span>
-                    </li>
-                    <li>
-                        <div class="about-title">AGE</div>
-                        <span class="about-value">29</span>
+                    <li v-for="info in infos" :key="info.title">
+                        <div class="list-title">{{info.title}}</div>
+                        <span class="list-value">{{info.value}}</span>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="about-social">
-            <v-icon>mdi-github-circle</v-icon>
-            <v-icon>mdi-twitter-circle</v-icon>
-            <v-icon>mdi-facebook</v-icon>
-            <v-icon>mdi-blogger</v-icon>
-            <v-icon>mdi-instagram</v-icon>
+            <v-btn icon class="social-link" v-for="social in socials" :key="social.title">
+                <v-icon>{{social.icon}}</v-icon>
+            </v-btn>
         </div>
     </v-card>
 </template>
@@ -56,6 +38,9 @@ export default {
     computed: {
         cardBg() {
             return this.$color['--card-bg']
+        },
+        lightGray() {
+            return this.$color['--font-gray-3']
         }
     },
     data() {
@@ -66,20 +51,47 @@ export default {
                     value: 29
                 },
                 {
-                    title: 'age',
-                    value: 29
+                    title: 'address',
+                    value: '24058, Belgium, Brussels, Liutte 27, BE'
                 },
                 {
-                    title: 'age',
-                    value: 29
+                    title: 'e-mail',
+                    value: 'devparkoon@gmail.com'
                 },
                 {
-                    title: 'age',
-                    value: 29
+                    title: 'phone',
+                    value: '010.3328.0917'
                 },
                 {
-                    title: 'age',
-                    value: 29
+                    title: 'sex',
+                    value: 'man'
+                }
+            ],
+            socials: [
+                {
+                    title: 'github',
+                    icon: 'mdi-github-circle',
+                    link: '/'
+                },
+                {
+                    title: 'twitter',
+                    icon: 'mdi-twitter-circle',
+                    link: '/'
+                },
+                {
+                    title: 'faceboock',
+                    icon: 'mdi-facebook',
+                    link: '/'
+                },
+                {
+                    title: 'blog',
+                    icon: 'mdi-blogger',
+                    link: '/'
+                },
+                {
+                    title: 'instagram',
+                    icon: 'mdi-instagram',
+                    link: '/'
                 }
             ]
         }
@@ -89,25 +101,36 @@ export default {
 
 <style scoped>
 .about-content {
+    color: var(--font-gray-1);
     display: flex;
-    padding: 57px 50px 15px 50px;
+    padding: 57px 50px 37px 50px;
 }
 
 .about-image {
-    flex: 1;
     text-align: center;
 }
 
 .about-info {
-    flex: 2;
+    flex: 1;
+    margin-left: 37px;
+}
+
+.about-info .about-title {
+    font-size: 37px;
+    margin: 0;
+}
+
+.about-info .about-title span {
+    font-weight: bold;
 }
 
 .about-preword {
     position: relative;
-    display: inline;
+    display: inline-block;
     background: red;
-    padding: 7px 10px;
+    padding: 3px 7px;
     font-weight: bold;
+    margin-bottom: 24px;
 }
 
 .about-preword::after {
@@ -125,13 +148,23 @@ export default {
 
 .about-list {
     list-style: none;
+    margin-top: 27px;
+    padding-left: 0;
 }
 
 .about-list li {
     display: flex;
+    margin-bottom: 13px;
 }
-.about-list li .about-title {
+.about-list li .list-title {
     width: 120px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about-list li .list-value {
+    color: var(--font-gray-3);
 }
 
 .about-social {
@@ -142,14 +175,22 @@ export default {
     height: 75px;
 }
 
-.about-social i {
+.about-social .social-link {
     margin-right: 42px;
 }
+
+/* .about-social i {
+} */
 
 @media screen and (max-width: 960px) {
     .about-content {
         flex-direction: column;
+        padding: 30px 15px;
         /* align-items: center; */
+    }
+    .about-preword {
+        width: 120px;
+        margin-top: 24px;
     }
 
     .about-image {
@@ -158,11 +199,15 @@ export default {
 
     .about-info {
         text-align: center;
+        margin-left: 0;
     }
 
     .about-list {
         width: 100%;
         text-align: left;
+    }
+    .about-list li {
+        flex-direction: column;
     }
 }
 </style>
