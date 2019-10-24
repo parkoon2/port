@@ -4,7 +4,11 @@
 
         <v-content :style="{backgroundColor: bodyBg}" class="content">
             <v-container pa-5>
-                <router-view></router-view>
+                <!-- <router-view></router-view> -->
+
+                <about-page></about-page>
+                <skill-page></skill-page>
+                <work-page></work-page>
             </v-container>
         </v-content>
         <!-- <app-footer></app-footer> -->
@@ -19,6 +23,10 @@ import EducationTimeline from '@/components/timeline/EducationTimeline'
 import WorkDetail from '@/components/work/WorkDetail'
 import AppFooter from '@/components/shared/AppFooter'
 
+import SkillPage from './views/Skill'
+import AboutPage from './views/About'
+import WorkPage from './views/Work'
+
 export default {
     components: {
         AppBar,
@@ -27,7 +35,10 @@ export default {
         MyWork,
         EducationTimeline,
         WorkDetail,
-        AppFooter
+        AppFooter,
+        SkillPage,
+        AboutPage,
+        WorkPage
     },
     computed: {
         bodyBg() {
@@ -42,5 +53,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 64px !important;
 }
 </style>

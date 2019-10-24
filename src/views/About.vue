@@ -1,5 +1,5 @@
 <template>
-    <div class="about">
+    <div class="about" id="about">
         <div class="about-bg"></div>
         <!-- About card -->
         <about-card></about-card>

@@ -1,6 +1,6 @@
 <template>
     <!-- Skill Card -->
-    <div class="skill">
+    <div class="skill" id="skills">
         <h2 class="page-title">Professional Skills</h2>
         <skill-card></skill-card>
     </div>

@@ -1,6 +1,6 @@
 <template>
-    <div class="app-bar">
-        <v-app-bar :color="bgColor" dark>
+    <div class="app-bar" ref="appbar">
+        <v-app-bar :color="setAppbarHeader" dark :flat="this.isScrollTop">
             <v-toolbar-title class="logo">LOGO</v-toolbar-title>
 
             <v-spacer></v-spacer>
@@ -19,15 +19,15 @@
                         active-class="hello"
                         class="menu-btn"
                     >{{item.title}}</v-btn>-->
-                    <router-link
-                        href
+                    <a
                         v-for="(item, i) in items"
                         :key="i"
                         text
                         :to="item.to"
                         class="menu-btn"
                         active-class="active"
-                    >{{item.title}}</router-link>
+                        @click.stop="scrollTo(item)"
+                    >{{item.title}}</a>
                 </div>
             </div>
         </v-app-bar>
@@ -64,10 +64,18 @@ export default {
         },
         grayColor() {
             return color['--font-gray-3']
+        },
+        setAppbarHeader() {
+            if (this.isScrollTop) {
+                return 'transparent'
+            } else {
+                return this.bgColor
+            }
         }
     },
     data() {
         return {
+            isScrollTop: true,
             drawer: null,
             items: [
                 {
@@ -96,6 +104,26 @@ export default {
     methods: {
         toggleDrawer() {
             this.drawer = !this.drawer
+        },
+        scrollTo(item) {
+            const element = document.getElementById(item.title)
+
+            element.scrollIntoView({
+                behavior: 'smooth'
+            })
+
+            this.$nextTick(() => {
+                console.log(element)
+            })
+        }
+    },
+    mounted() {
+        window.onscroll = () => {
+            if (window.scrollY > 0) {
+                this.isScrollTop = false
+            } else {
+                this.isScrollTop = true
+            }
         }
     }
 }
@@ -104,6 +132,9 @@ export default {
 <style scoped>
 .app-bar {
     z-index: 10;
+    position: fixed;
+    width: 100%;
+    background: transparent;
 }
 .logo {
     margin-left: 12px;
