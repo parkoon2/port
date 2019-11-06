@@ -1,10 +1,8 @@
 <template>
     <div class="contact" :color="cardBg">
-        <page-title
-            title="my professional skills"
-            subtitle="From Web Components and UI/UX animations to React.JS, Redux, Vue.JS, and Node.JS. Check out my latest web software development portfolio projects."
-        ></page-title>
+        <page-title title="CONTACT ME"></page-title>
 
+        <section-divider></section-divider>
         <div class="contact-card-container">
             <v-card class="contact-card" :color="cardBg">
                 <v-form v-model="valid">
@@ -71,9 +69,10 @@
 import GoogleMap from '@/components/GoogleMap'
 import PageTitle from '@/components/PageTitle'
 import AppButton from '@/components/AppButton'
+import SectionDivider from '@/components/shared/SectionDivider'
 export default {
     name: 'contact',
-    components: { GoogleMap, PageTitle, AppButton },
+    components: { GoogleMap, PageTitle, AppButton, SectionDivider },
     computed: {
         cardBg() {
             return this.$color['--card-bg']
@@ -124,5 +123,20 @@ export default {
     display: flex;
     justify-content: flex-end;
     width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+    .contact-card-container {
+        flex-direction: column;
+    }
+    .map-card,
+    .contact-card {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .contact-card {
+        margin-bottom: 24px;
+    }
 }
 </style>

@@ -24,6 +24,8 @@ import AboutPage from './views/About'
 import WorkPage from './views/Work'
 import ContactPage from './views/Contact'
 import FloatingMenu from '@/components/FloatingMenu'
+import AppFooter from '@/components/shared/AppFooter'
+import AppBar from '@/components/appbar/AppBar'
 
 export default {
     components: {
@@ -31,7 +33,9 @@ export default {
         AboutPage,
         WorkPage,
         ContactPage,
-        FloatingMenu
+        FloatingMenu,
+        AppFooter,
+        AppBar
     },
     computed: {
         bodyBg() {
