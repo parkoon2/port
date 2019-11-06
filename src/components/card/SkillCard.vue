@@ -1,14 +1,15 @@
 <template>
     <div>
-        <page-title
-            title="my professional skills"
-            subtitle="From Web Components and UI/UX animations to React.JS, Redux, Vue.JS, and Node.JS. Check out my latest web software development portfolio projects."
-        ></page-title>
+        <!-- subtitle="From Web Components and UI/UX animations to React.JS, Redux, Vue.JS, and Node.JS. Check out my latest web software development portfolio projects." -->
+        <page-title title="PROFESIONAL SKILLS"></page-title>
+
+        <section-divider></section-divider>
         <v-card>
             <div class="skill-container">
                 <div class="skill-inner" v-for="skill in skills" :key="skill.title">
                     <h2 class="skill-title">{{skill.title}}</h2>
-                    <v-progress-linear :value="skill.level" height="5" rounded :color="primary"></v-progress-linear>
+                    <v-progress-linear :value="skill.level" height="17" :color="primary"></v-progress-linear>
+                    <div class="skill-level">{{skill.level}}%</div>
                 </div>
             </div>
         </v-card>
@@ -17,10 +18,12 @@
 
 <script>
 import PageTitle from '@/components/PageTitle'
+import SectionDivider from '@/components/shared/SectionDivider'
 export default {
     name: 'skill-card',
     components: {
-        PageTitle
+        PageTitle,
+        SectionDivider
     },
     computed: {
         primary() {
@@ -82,8 +85,15 @@ export default {
 }
 
 .skill-inner .skill-title {
-    font-weight: normal;
-    font-size: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+.skill-inner .skill-level {
+    text-align: right;
+    font-size: 0.9rem;
+    margin-top: 2px;
 }
 @media screen and (max-width: 960px) {
     .skill-inner {

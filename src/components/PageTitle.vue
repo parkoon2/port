@@ -15,6 +15,7 @@ export default {
     color: var(--font-gray-1);
     font-size: 42px;
     margin: 0;
+    text-align: center;
 }
 
 .page-title p {
