@@ -19,6 +19,9 @@ export default {
 
 <style scoped>
 .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 70%;
     margin: 120px auto;
     max-width: 1200px;
@@ -47,6 +50,7 @@ export default {
 .download-btn {
     border-color: var(--font-gray-3);
     color: var(--font-gray-3);
-    margin-top: 32px;
+    margin-top: 72px;
+    width: 200px;
 }
 </style>
