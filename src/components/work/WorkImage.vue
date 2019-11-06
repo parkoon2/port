@@ -7,10 +7,11 @@
                 </v-row>
             </template>
         </v-img>
-
         <div class="work-info">
-            <h2>{{title}}</h2>
-            <p>{{subtitle}}</p>
+            <div class="work-titles">
+                <h2>{{title}}</h2>
+                <p>{{subtitle}}</p>
+            </div>
             <div class="work-actions">
                 <app-button
                     class="work-action"
@@ -65,7 +66,15 @@ export default {
 <style scoped>
 .work-box {
     position: relative;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    width: 100%;
+    height: 100%;
+}
+
+.work-box .work-image {
+    width: 100%;
+    height: 100%;
 }
 
 .work-box::after {
@@ -82,7 +91,7 @@ export default {
     padding: 10px 20px;
     position: absolute;
     bottom: 17px;
-    transform: translateY(72px);
+    /* transform: translateY(72px); */
     transition: 0.3s;
     z-index: 4;
 }
@@ -100,11 +109,24 @@ export default {
 }
 
 .work-action {
-    transform: translateY(32px);
+    /* transform: translateY(32px); */
     visibility: hidden;
     opacity: 0;
     transition: 0.01s;
     margin-right: 10px;
+}
+
+.work-titles {
+    transform: translateY(72px);
+    transition: 0.3s ease-in-out;
+}
+
+.work-box:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.work-box:hover .work-titles {
+    transform: translateY(0);
 }
 
 .work-box:hover .work-action.second {
@@ -125,7 +147,10 @@ export default {
 .work-box:hover .work-info {
     transform: translateY(0px);
 }
-
+.work-image {
+    width: 100%;
+    /* width:  */
+}
 .work-image:hover .work-info {
     transform: translateY(200px);
 }

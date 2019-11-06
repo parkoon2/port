@@ -2,10 +2,10 @@
     <div>
         <v-row>
             <v-col>
-                <page-title
-                    title="web developer portfolio"
-                    subtitle="From Web Components and UI/UX animations to React.JS, Redux, Vue.JS, and Node.JS. Check out my latest web software development portfolio projects."
-                ></page-title>
+                <!-- subtitle="From Web Components and UI/UX animations to React.JS, Redux, Vue.JS, and Node.JS. Check out my latest web software development portfolio projects." -->
+                <page-title title="PORTFOLIO"></page-title>
+
+                <section-divider></section-divider>
             </v-col>
         </v-row>
         <v-row>
@@ -21,8 +21,130 @@
                 </v-chip>
             </v-col>
         </v-row>
-        <v-row>
-            <v-col v-for="work in works" :key="work.id" sm="6" md="4" xs="12" class="image-box">
+        <v-row class="image-grid">
+            <div class="image-box">
+                <work-image
+                    :id="1"
+                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
+                    :title="3"
+                    :subtitle="4"
+                    :git="5"
+                    :demo="6"
+                    :tags="7"
+                ></work-image>
+            </div>
+            <div class="image-box">
+                <work-image
+                    :id="1"
+                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
+                    :title="3"
+                    :subtitle="4"
+                    :git="5"
+                    :demo="6"
+                    :tags="7"
+                ></work-image>
+            </div>
+            <div class="image-box">
+                <work-image
+                    :id="1"
+                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
+                    :title="3"
+                    :subtitle="4"
+                    :git="5"
+                    :demo="6"
+                    :tags="7"
+                ></work-image>
+            </div>
+            <div class="image-box">
+                <work-image
+                    :id="1"
+                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
+                    :title="3"
+                    :subtitle="4"
+                    :git="5"
+                    :demo="6"
+                    :tags="7"
+                ></work-image>
+            </div>
+            <div class="image-box">
+                <work-image
+                    :id="1"
+                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
+                    :title="3"
+                    :subtitle="4"
+                    :git="5"
+                    :demo="6"
+                    :tags="7"
+                ></work-image>
+            </div>
+            <div class="image-box">
+                <work-image
+                    :id="1"
+                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
+                    :title="3"
+                    :subtitle="4"
+                    :git="5"
+                    :demo="6"
+                    :tags="7"
+                ></work-image>
+            </div>
+            <div class="image-box">
+                <work-image
+                    :id="1"
+                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
+                    :title="3"
+                    :subtitle="4"
+                    :git="5"
+                    :demo="6"
+                    :tags="7"
+                ></work-image>
+            </div>
+            <div class="image-box">
+                <work-image
+                    :id="1"
+                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
+                    :title="3"
+                    :subtitle="4"
+                    :git="5"
+                    :demo="6"
+                    :tags="7"
+                ></work-image>
+            </div>
+            <div class="image-box">
+                <work-image
+                    :id="1"
+                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
+                    :title="3"
+                    :subtitle="4"
+                    :git="5"
+                    :demo="6"
+                    :tags="7"
+                ></work-image>
+            </div>
+            <div class="image-box">
+                <work-image
+                    :id="1"
+                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
+                    :title="3"
+                    :subtitle="4"
+                    :git="5"
+                    :demo="6"
+                    :tags="7"
+                ></work-image>
+            </div>
+            <div class="image-box">
+                <work-image
+                    :id="1"
+                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
+                    :title="3"
+                    :subtitle="4"
+                    :git="5"
+                    :demo="6"
+                    :tags="7"
+                ></work-image>
+            </div>
+
+            <!-- <v-col v-for="work in works" :key="work.id" sm="6" md="4" xs="12" class="image-box">
                 <work-image
                     :id="work.id"
                     :src="work.image"
@@ -32,7 +154,7 @@
                     :demo="work.demo"
                     :tags="work.tags"
                 ></work-image>
-            </v-col>
+            </v-col>-->
         </v-row>
         <v-row>
             <v-col class="more-btn-box">
@@ -48,12 +170,14 @@
 import WorkImage from './WorkImage'
 import PageTitle from '@/components/PageTitle'
 import AppButton from '@/components/AppButton'
+import SectionDivider from '@/components/shared/SectionDivider'
 export default {
     name: 'my-work',
     components: {
         WorkImage,
         PageTitle,
-        AppButton
+        AppButton,
+        SectionDivider
     },
     data() {
         return {
@@ -173,11 +297,49 @@ export default {
 .more-btn-box {
     display: flex;
     justify-content: center;
+    margin-top: 72px;
+}
+
+.image-grid {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 230px;
+    grid-auto-rows: 230px;
+}
+
+.image-grid .image-box {
+    /* width: 100%; */
+    background: red;
+}
+
+.image-grid .image-box:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+@media screen and (max-width: 960px) {
+    .image-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .image-grid .image-box:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .image-box {
-        flex: 0 0 100%;
+    .image-grid {
+        grid-template-columns: 1fr;
+        grid-row-gap: 32px;
+        grid-template-rows: 320px;
+        grid-auto-rows: 320px;
+    }
+
+    .image-grid .image-box:first-child {
+        grid-column: 1;
+        grid-row: 1;
     }
 }
 </style>
