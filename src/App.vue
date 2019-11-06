@@ -19,14 +19,6 @@
     </v-app>
 </template>
 <script>
-import AppBar from '@/components/appbar/AppBar'
-import AboutCard from '@/components/card/AboutCard'
-import SkillCard from '@/components/card/SkillCard'
-import MyWork from '@/components/work/MyWork'
-import EducationTimeline from '@/components/timeline/EducationTimeline'
-import WorkDetail from '@/components/work/WorkDetail'
-import AppFooter from '@/components/shared/AppFooter'
-
 import SkillPage from './views/Skill'
 import AboutPage from './views/About'
 import WorkPage from './views/Work'
@@ -35,13 +27,6 @@ import FloatingMenu from '@/components/FloatingMenu'
 
 export default {
     components: {
-        AppBar,
-        AboutCard,
-        SkillCard,
-        MyWork,
-        EducationTimeline,
-        WorkDetail,
-        AppFooter,
         SkillPage,
         AboutPage,
         WorkPage,
