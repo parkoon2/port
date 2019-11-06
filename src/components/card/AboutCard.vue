@@ -1,15 +1,6 @@
 <template>
     <v-card class="mx-auto" :color="cardBg">
         <div class="about-content">
-            <div class="about-image">
-                <v-img
-                    height="350"
-                    width="295"
-                    :src="me"
-                    @mouseover="handleMouseover"
-                    @mouseout="handleMouseout"
-                ></v-img>
-            </div>
             <div class="about-info">
                 <div class="about-preword">PASSION</div>
                 <p class="about-title">
@@ -34,6 +25,9 @@
                     </li>
                 </ul>
             </div>
+            <div class="about-image">
+                <!-- <v-img height="350" width="295" :src="me"></v-img> -->
+            </div>
         </div>
         <div class="about-social">
             <v-btn icon class="social-link" v-for="social in socials" :key="social.title">
@@ -43,9 +37,6 @@
     </v-card>
 </template>
 <script>
-import me from '../../assets/me.jpg'
-import hireMe from '../../assets/me-hire.png'
-
 export default {
     computed: {
         cardBg() {
@@ -87,12 +78,12 @@ export default {
             socials: [
                 {
                     title: 'github',
-                    icon: 'mdi-github-circle',
+                    icon: 'mdi-github-box',
                     link: '/'
                 },
                 {
                     title: 'twitter',
-                    icon: 'mdi-twitter-circle',
+                    icon: 'mdi-twitter',
                     link: '/'
                 },
                 {
@@ -114,12 +105,12 @@ export default {
         }
     },
     methods: {
-        handleMouseover() {
-            this.hoverOnMe = true
-        },
-        handleMouseout() {
-            this.hoverOnMe = false
-        }
+        // handleMouseover() {
+        //     this.hoverOnMe = true
+        // },
+        // handleMouseout() {
+        //     this.hoverOnMe = false
+        // }
     }
 }
 </script>
@@ -128,16 +119,21 @@ export default {
 .about-content {
     color: var(--font-gray-1);
     display: flex;
-    padding: 57px 50px 37px 50px;
+    padding: 57px 50px 12px 50px;
 }
 
 .about-image {
-    text-align: center;
+    width: 352px;
+    background-image: url('../../assets/me.jpg');
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .about-info {
-    flex: 1;
-    margin-left: 37px;
+    margin-right: 32px;
+    /* flex: 1; */
+    /* margin-left: 37px; */
 }
 
 .about-info .about-title {
@@ -178,8 +174,11 @@ export default {
 }
 
 .about-list li {
-    display: flex;
-    margin-bottom: 13px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* display: flex;
+    margin-bottom: 13px; */
+    margin-bottom: 7px;
 }
 .about-list li .list-title {
     width: 120px;
@@ -189,19 +188,29 @@ export default {
 }
 
 .about-list li .list-value {
+    grid-column: span 3;
     color: var(--font-gray-3);
 }
 
 .about-social {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: var(--primary);
+    /* background: var(--primary); */
     height: 75px;
+    padding: 0 0 35px 40px;
+    color: var(--font-gray-3);
 }
 
 .about-social .social-link {
     margin-right: 42px;
+    color: var(--font-gray-3);
+
+    transition: background 0.2s ease-in-out;
+}
+.about-social .social-link:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 /* .about-social i {
@@ -220,11 +229,20 @@ export default {
 
     .about-image {
         margin: 0 auto;
+        /* width: 320px; */
+        height: 420px;
+        order: -1;
+        margin-bottom: 20px;
     }
 
     .about-info {
         text-align: center;
-        margin-left: 0;
+        margin-right: 0 auto;
+        padding: 0 42px;
+    }
+
+    .about-social {
+        justify-content: center;
     }
 
     .about-list {
