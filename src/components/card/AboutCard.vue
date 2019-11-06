@@ -30,14 +30,20 @@
             </div>
         </div>
         <div class="about-social">
-            <v-btn icon class="social-link" v-for="social in socials" :key="social.title">
+            <!-- <v-btn icon class="social-link" v-for="social in socials" :key="social.title">
                 <v-icon>{{social.icon}}</v-icon>
-            </v-btn>
+            </v-btn>-->
+
+            <social-link></social-link>
         </div>
     </v-card>
 </template>
 <script>
+import SocialLink from '@/components/shared/SocialLink'
 export default {
+    components: {
+        SocialLink
+    },
     computed: {
         cardBg() {
             return this.$color['--card-bg']

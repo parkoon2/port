@@ -14,7 +14,7 @@
                 <contact-page></contact-page>
             </v-container>
         </v-content>
-        <floating-menu></floating-menu>
+        <!-- <floating-menu></floating-menu> -->
         <app-footer></app-footer>
     </v-app>
 </template>
