@@ -1,7 +1,9 @@
 <template>
     <div class="app-bar" ref="appbar">
         <v-app-bar :color="setAppbarHeader" dark :flat="this.isScrollTop">
-            <v-toolbar-title class="logo">LOGO</v-toolbar-title>
+            <v-toolbar-title class="logo">
+                <span :style="{color: primary, fontWeight: 'bold'}">P</span>ARKOON
+            </v-toolbar-title>
 
             <v-spacer></v-spacer>
 
@@ -10,15 +12,6 @@
                     <v-icon>mdi-menu</v-icon>
                 </v-btn>
                 <div class="menu-box pc">
-                    <!-- <v-btn
-                        v-for="(item, i) in items"
-                        :key="i"
-                        text
-                        :color="grayColor"
-                        :to="item.to"
-                        active-class="hello"
-                        class="menu-btn"
-                    >{{item.title}}</v-btn>-->
                     <a
                         v-for="(item, i) in items"
                         :key="i"
@@ -54,16 +47,14 @@
 
 
 <script>
-import color from '@/constants/color'
-
 export default {
     components: {},
     computed: {
         bgColor() {
-            return color['--body-bg']
+            return this.$color['--body-bg']
         },
         grayColor() {
-            return color['--font-gray-3']
+            return this.$color['--font-gray-3']
         },
         setAppbarHeader() {
             if (this.isScrollTop) {
@@ -71,6 +62,9 @@ export default {
             } else {
                 return this.bgColor
             }
+        },
+        primary() {
+            return this.$color['--primary']
         }
     },
     data() {
@@ -108,9 +102,29 @@ export default {
         scrollTo(item) {
             const element = document.getElementById(item.title)
 
-            element.scrollIntoView({
-                behavior: 'smooth'
+            if (item.title === 'about') {
+                return window.scrollTo({
+                    behavior: 'smooth',
+                    top: 0,
+                    left: 0
+                })
+            }
+
+            const style = getComputedStyle(element)
+            const marginTop = Number(
+                style.marginTop.slice(0, style.marginTop.indexOf('px'))
+            )
+            window.scrollTo({
+                behavior: 'smooth',
+                top: element.offsetTop + marginTop,
+                left: 0
             })
+
+            // element.scrollIntoView({
+            //     behavior: 'smooth',
+            //     block: 'start',
+            //     inline: 'start'
+            // })
 
             this.$nextTick(() => {
                 console.log(element)
@@ -118,13 +132,13 @@ export default {
         }
     },
     mounted() {
-        window.onscroll = () => {
+        window.addEventListener('scroll', () => {
             if (window.scrollY > 0) {
                 this.isScrollTop = false
             } else {
                 this.isScrollTop = true
             }
-        }
+        })
     }
 }
 </script>
@@ -152,14 +166,15 @@ export default {
     font-weight: bold;
     margin-left: 30px;
     position: relative;
-    font-size: 13px;
+    font-size: 15px;
+    transition: 0.2s linear;
 }
 
 .menu-btn:last-child {
     margin-right: 12px;
 }
 
-.menu-btn::before {
+/* .menu-btn::before {
     content: '';
     width: 0;
     height: 3px;
@@ -181,10 +196,10 @@ export default {
     left: 0;
     border-radius: 7px;
     transition: 0.3s;
-}
+} */
 
-.menu-btn:hover:before {
-    width: 100%;
+.menu-btn:hover {
+    color: var(--primary);
 }
 @media screen and (max-width: 960px) {
     .menu-box.pc {

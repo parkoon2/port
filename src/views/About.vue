@@ -18,32 +18,30 @@ export default {
 </script>
 
 <style scoped>
+.about {
+    width: 70%;
+    margin: 120px auto;
+    max-width: 1200px;
+}
 .about-bg {
-    background: url('https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2016/02/rs-cover-2-2-1-1.jpg');
+    background: url('../assets/about-bg.jpg');
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 500px;
+    background-position: center center;
+    height: 77vh;
     width: 100%;
     position: absolute;
-    top: -113px;
+    top: -200px;
     left: 0;
+    margin-left: 20px;
 }
 .about-bg::after {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(44, 51, 64, 0.8);
+    background: rgba(44, 51, 64, 0.3);
     top: 0;
     left: 0;
-}
-.about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
 }
 
 .download-btn {

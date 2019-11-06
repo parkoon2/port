@@ -16,7 +16,9 @@ export default {
 
 <style scoped>
 .my-work {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 120px;
 }
 </style>

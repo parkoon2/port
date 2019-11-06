@@ -7,11 +7,15 @@
                 <!-- <router-view></router-view> -->
 
                 <about-page></about-page>
+
                 <skill-page></skill-page>
                 <work-page></work-page>
+
+                <contact-page></contact-page>
             </v-container>
         </v-content>
-        <!-- <app-footer></app-footer> -->
+        <floating-menu></floating-menu>
+        <app-footer></app-footer>
     </v-app>
 </template>
 <script>
@@ -26,6 +30,8 @@ import AppFooter from '@/components/shared/AppFooter'
 import SkillPage from './views/Skill'
 import AboutPage from './views/About'
 import WorkPage from './views/Work'
+import ContactPage from './views/Contact'
+import FloatingMenu from '@/components/FloatingMenu'
 
 export default {
     components: {
@@ -38,7 +44,9 @@ export default {
         AppFooter,
         SkillPage,
         AboutPage,
-        WorkPage
+        WorkPage,
+        ContactPage,
+        FloatingMenu
     },
     computed: {
         bodyBg() {
@@ -53,6 +61,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 64px !important;
+    padding-top: 200px !important;
 }
 </style>

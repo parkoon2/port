@@ -1,22 +1,24 @@
 <template>
     <!-- Skill Card -->
     <div class="skill" id="skills">
-        <h2 class="page-title">Professional Skills</h2>
         <skill-card></skill-card>
     </div>
 </template>
 
 <script>
 import SkillCard from '@/components/card/SkillCard'
+import PageTitle from '@/components/PageTitle'
 export default {
     name: 'skill',
-    components: { SkillCard }
+    components: { SkillCard, PageTitle }
 }
 </script>
 <style scoped>
 .skill {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
+    margin-top: 120px;
+    max-width: 1200px;
 }
 .page-title {
     color: var(--font-gray-3);

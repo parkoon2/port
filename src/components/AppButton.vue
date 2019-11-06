@@ -1,13 +1,14 @@
 <template>
     <div class="app-button" @click="onClick">
-        <v-icon :color="color">{{icon}}</v-icon>
+        <v-icon v-if="icon" :color="color">{{icon}}</v-icon>
+        <span v-if="title" :color="color">{{title}}</span>
     </div>
 </template>
 
 <script>
 export default {
     name: 'app-button',
-    props: ['icon', 'onClick', 'color']
+    props: ['icon', 'onClick', 'color', 'title']
 }
 </script>
 <style scoped>

@@ -5,23 +5,32 @@
                 <v-img
                     height="350"
                     width="295"
-                    src="https://cdn.vuetifyjs.com/images/cards/store.jpg"
+                    :src="me"
+                    @mouseover="handleMouseover"
+                    @mouseout="handleMouseout"
                 ></v-img>
             </div>
             <div class="about-info">
-                <div class="about-preword">HELLO</div>
+                <div class="about-preword">PASSION</div>
                 <p class="about-title">
                     I'm
-                    <span>Robert Smith</span>
+                    <span>Jong Hyeok Park</span>
                 </p>
-                <p class="about-subtitle">Developer and Startup enterpreneur</p>
+                <p class="about-subtitle">Frontend & Backend Developer</p>
 
                 <v-divider :color="lightGray"></v-divider>
 
                 <ul class="about-list">
                     <li v-for="info in infos" :key="info.title">
                         <div class="list-title">{{info.title}}</div>
-                        <span class="list-value">{{info.value}}</span>
+                        <div v-if="Array.isArray(info.value)">
+                            <span
+                                v-for="(v, index) in info.value"
+                                :key="index"
+                                class="list-value"
+                            >{{v}}</span>
+                        </div>
+                        <span v-else class="list-value">{{info.value}}</span>
                     </li>
                 </ul>
             </div>
@@ -34,6 +43,9 @@
     </v-card>
 </template>
 <script>
+import me from '../../assets/me.jpg'
+import hireMe from '../../assets/me-hire.png'
+
 export default {
     computed: {
         cardBg() {
@@ -41,18 +53,23 @@ export default {
         },
         lightGray() {
             return this.$color['--font-gray-3']
+        },
+        me() {
+            return this.hoverOnMe ? hireMe : me
         }
     },
     data() {
         return {
+            hoverOnMe: false,
             infos: [
                 {
                     title: 'age',
-                    value: 29
+                    value: 30
                 },
                 {
                     title: 'address',
-                    value: '24058, Belgium, Brussels, Liutte 27, BE'
+                    value:
+                        'Wabu-eup, Namyangju-si, Gyeonggi-do, Republic of Korea'
                 },
                 {
                     title: 'e-mail',
@@ -63,8 +80,8 @@ export default {
                     value: '010.3328.0917'
                 },
                 {
-                    title: 'sex',
-                    value: 'man'
+                    title: 'hobbies',
+                    value: ['man', 'dd']
                 }
             ],
             socials: [
@@ -94,6 +111,14 @@ export default {
                     link: '/'
                 }
             ]
+        }
+    },
+    methods: {
+        handleMouseover() {
+            this.hoverOnMe = true
+        },
+        handleMouseout() {
+            this.hoverOnMe = false
         }
     }
 }
@@ -128,7 +153,7 @@ export default {
     position: relative;
     display: inline-block;
     background: var(--primary);
-    padding: 3px 7px;
+    padding: 3px 12px;
     font-weight: bold;
     margin-bottom: 24px;
 }
