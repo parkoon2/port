@@ -1,5 +1,5 @@
 <template>
-    <div class="my-work" id="works">
+    <div class="works" id="works">
         <my-work></my-work>
         <!-- <work-detail></work-detail> -->
     </div>
@@ -15,10 +15,16 @@ export default {
 </script>
 
 <style scoped>
-.my-work {
+.works {
     width: 70%;
     margin: 0 auto;
     max-width: 1200px;
     margin-top: 120px;
+}
+
+@media screen and (max-width: 600px) {
+    .works {
+        width: 90%;
+    }
 }
 </style>

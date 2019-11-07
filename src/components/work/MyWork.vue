@@ -21,7 +21,7 @@
                 </v-chip>
             </v-col>
         </v-row>
-        <v-row class="image-grid">
+        <v-row class="image__grid">
             <div class="image-box">
                 <work-image
                     :id="1"
@@ -300,7 +300,7 @@ export default {
     margin-top: 72px;
 }
 
-.image-grid {
+.image__grid {
     display: grid;
     grid-gap: 12px;
     grid-template-columns: repeat(3, 1fr);
@@ -308,36 +308,36 @@ export default {
     grid-auto-rows: 230px;
 }
 
-.image-grid .image-box {
+.image__grid .image-box {
     /* width: 100%; */
     background: red;
 }
 
-.image-grid .image-box:first-child {
+.image__grid .image-box:first-child {
     grid-column: span 2;
     grid-row: span 2;
 }
 
 @media screen and (max-width: 960px) {
-    .image-grid {
+    .image__grid {
         grid-template-columns: 1fr 1fr;
     }
 
-    .image-grid .image-box:first-child {
+    .image__grid .image-box:first-child {
         grid-column: 1;
         grid-row: 1;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .image-grid {
+    .image__grid {
         grid-template-columns: 1fr;
-        grid-row-gap: 32px;
+        grid-row-gap: 12px;
         grid-template-rows: 320px;
         grid-auto-rows: 320px;
     }
 
-    .image-grid .image-box:first-child {
+    .image__grid .image-box:first-child {
         grid-column: 1;
         grid-row: 1;
     }

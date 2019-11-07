@@ -55,7 +55,7 @@ export default {
 
 @media screen and (max-width: 600px) {
     .about {
-        width: 100%;
+        width: 95%;
     }
 }
 </style>

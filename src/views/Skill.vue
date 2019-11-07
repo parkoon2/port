@@ -23,7 +23,7 @@ export default {
 
 @media screen and (max-width: 600px) {
     .skill {
-        width: 100%;
+        width: 95%;
     }
 }
 </style>
