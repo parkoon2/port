@@ -3,19 +3,17 @@
         <app-bar></app-bar>
 
         <v-content :style="{backgroundColor: bodyBg}" class="content">
-            <v-container pa-5>
-                <!-- <router-view></router-view> -->
+            <!-- <router-view></router-view> -->
 
-                <about-page></about-page>
+            <about-page></about-page>
 
-                <skill-page></skill-page>
-                <work-page></work-page>
+            <!-- <skill-page></skill-page>
+            <work-page></work-page>-->
 
-                <contact-page></contact-page>
-            </v-container>
+            <!-- <contact-page></contact-page> -->
         </v-content>
         <!-- <floating-menu></floating-menu> -->
-        <app-footer></app-footer>
+        <!-- <app-footer></app-footer> -->
     </v-app>
 </template>
 <script>

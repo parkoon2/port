@@ -1,11 +1,11 @@
 <template>
     <div class="about" id="about">
-        <div class="about-bg"></div>
+        <div class="about__bg"></div>
         <!-- About card -->
         <about-card></about-card>
 
         <!-- Download button -->
-        <v-btn outlined large dark class="download-btn">DOWNLOAD RESUME</v-btn>
+        <!-- <v-btn outlined large dark class="download-btn">DOWNLOAD RESUME</v-btn> -->
     </div>
 </template>
 
@@ -26,18 +26,17 @@ export default {
     margin: 120px auto;
     max-width: 1200px;
 }
-.about-bg {
+.about__bg {
     background: url('../assets/about-bg.jpg');
     background-size: cover;
     background-position: center center;
     height: 77vh;
     width: 100%;
     position: absolute;
-    top: -200px;
+    top: -230px;
     left: 0;
-    margin-left: 20px;
 }
-.about-bg::after {
+.about__bg::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -52,5 +51,11 @@ export default {
     color: var(--font-gray-3);
     margin-top: 72px;
     width: 200px;
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        width: 100%;
+    }
 }
 </style>

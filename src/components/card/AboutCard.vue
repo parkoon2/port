@@ -1,17 +1,17 @@
 <template>
-    <v-card class="mx-auto" :color="cardBg">
-        <div class="about-content">
-            <div class="about-info">
-                <div class="about-preword">PASSION</div>
-                <p class="about-title">
+    <div class="about__card" :color="cardBg">
+        <div class="about__content">
+            <div class="about__info">
+                <div class="about__info--preword">PASSION</div>
+                <p class="about__info--title">
                     I'm
                     <span>Jong Hyeok Park</span>
                 </p>
-                <p class="about-subtitle">Frontend & Backend Developer</p>
+                <p class="about__info--subtitle">Frontend & Backend Developer</p>
 
                 <v-divider :color="lightGray"></v-divider>
 
-                <ul class="about-list">
+                <ul class="about__info--list">
                     <li v-for="info in infos" :key="info.title">
                         <div class="list-title">{{info.title}}</div>
                         <div v-if="Array.isArray(info.value)">
@@ -25,7 +25,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="about-image">
+            <div class="about__photo">
                 <!-- <v-img height="350" width="295" :src="me"></v-img> -->
             </div>
         </div>
@@ -36,7 +36,7 @@
 
             <social-link></social-link>
         </div>
-    </v-card>
+    </div>
 </template>
 <script>
 import SocialLink from '@/components/shared/SocialLink'
@@ -122,36 +122,44 @@ export default {
 </script>
 
 <style scoped>
-.about-content {
+.about__card {
+    width: 100%;
+    z-index: 1;
+    background: var(--card-bg);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.about__card .about__content {
     color: var(--font-gray-1);
     display: flex;
     padding: 57px 50px 12px 50px;
 }
 
-.about-image {
-    width: 352px;
+.about__card .about__content .about__photo {
+    flex: 2;
+    width: 100%;
     background-image: url('../../assets/me.jpg');
     background-size: cover;
     background-position: center center;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.about-info {
+.about__card .about__content .about__info {
+    flex: 3;
     margin-right: 32px;
     /* flex: 1; */
     /* margin-left: 37px; */
 }
 
-.about-info .about-title {
+.about__info .about__info--title {
     font-size: 37px;
     margin: 0;
 }
 
-.about-info .about-title span {
+.about__info .about__info--title span {
     font-weight: bold;
 }
 
-.about-preword {
+.about__info--preword {
     position: relative;
     display: inline-block;
     background: var(--primary);
@@ -160,7 +168,7 @@ export default {
     margin-bottom: 24px;
 }
 
-.about-preword::after {
+.about__info--preword::after {
     content: '';
     width: 0;
     height: 0;
@@ -173,27 +181,27 @@ export default {
     border-left-color: var(--primary);
 }
 
-.about-list {
+.about__info--list {
     list-style: none;
     margin-top: 27px;
     padding-left: 0;
 }
 
-.about-list li {
+.about__info--list li {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     /* display: flex;
     margin-bottom: 13px; */
     margin-bottom: 7px;
 }
-.about-list li .list-title {
+.about__info--list li .list-title {
     width: 120px;
     font-size: 13px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.about-list li .list-value {
+.about__info--list li .list-value {
     grid-column: span 3;
     color: var(--font-gray-3);
 }
@@ -223,25 +231,27 @@ export default {
 } */
 
 @media screen and (max-width: 960px) {
-    .about-content {
+    .about__content {
         flex-direction: column;
         padding: 30px 15px;
         /* align-items: center; */
     }
-    .about-preword {
+    .about__info--preword {
         width: 120px;
         margin-top: 24px;
     }
 
-    .about-image {
+    .about__photo {
         margin: 0 auto;
         /* width: 320px; */
-        height: 420px;
+        height: 350px;
         order: -1;
+        flex: none !important;
         margin-bottom: 20px;
     }
 
-    .about-info {
+    .about__info {
+        flex: none !important;
         text-align: center;
         margin-right: 0 auto;
         padding: 0 42px;
@@ -251,12 +261,40 @@ export default {
         justify-content: center;
     }
 
-    .about-list {
+    .about__info--list {
         width: 100%;
         text-align: left;
     }
-    .about-list li {
+    .about__info--list li {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about__content {
+        padding: 0 !important;
+    }
+    .about__photo {
+        display: none !important;
+    }
+
+    .about__card .about__content .about__info {
+        margin-right: 0px;
+        padding: 12px;
+        /* flex: 1; */
+        /* margin-left: 37px; */
+    }
+    .about__info--list li {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-bottom: 17px;
+    }
+    .about__info--list li .list-title {
+        width: 100%;
+    }
+
+    .about__info .about__info--title {
+        font-size: 32px;
     }
 }
 </style>
