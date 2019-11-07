@@ -47,7 +47,6 @@ export default {
     justify-content: center;
     align-items: center;
     position: relative;
-    padding-right: 28px;
     height: 270px;
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3), 0 7px 12px rgba(0, 0, 0, 0.22);
     color: var(--font-gray-1);
@@ -108,5 +107,17 @@ export default {
 }
 .footer .footer__title-box .footer__title--line:last-child {
     margin-left: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .footer .footer__title-box .footer__title--line {
+        width: 52px;
+    }
+    .footer .footer__title-box .footer__title {
+        font-size: 22px;
+    }
+    .footer .footer__subtitle {
+        font-size: 13px;
+    }
 }
 </style>

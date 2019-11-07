@@ -9,7 +9,7 @@
             </v-col>
         </v-row>
         <v-row>
-            <v-col class="tag-box">
+            <v-col class="tag__box">
                 <v-chip
                     pill
                     :color="cardBg"
@@ -17,7 +17,7 @@
                     v-for="tag in tags"
                     :key="tag.title"
                 >
-                    <span class="tag-title">{{tag.title}}</span>
+                    <span class="tag__title">{{tag.title}}</span>
                 </v-chip>
             </v-col>
         </v-row>
@@ -271,7 +271,7 @@ export default {
     transform: rotate(90deg);
 }
 
-.tag-box {
+.tag__box {
     display: flex;
     flex-wrap: wrap;
 }
@@ -287,11 +287,12 @@ export default {
     background: var(--primary) !important;
 }
 
-.tag-title {
+.tag__title {
     color: var(--font-gray-1);
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
+    font-size: 14px;
 }
 
 .more-btn-box {
@@ -340,6 +341,15 @@ export default {
     .image__grid .image-box:first-child {
         grid-column: 1;
         grid-row: 1;
+    }
+
+    .tag__title {
+        letter-spacing: 0px;
+        font-size: 12px;
+    }
+    .tag__box {
+        justify-content: center;
+        align-items: center;
     }
 }
 </style>

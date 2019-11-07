@@ -13,7 +13,7 @@
             <contact-page></contact-page>
         </v-content>
         <!-- <floating-menu></floating-menu> -->
-        <!-- <app-footer></app-footer> -->
+        <app-footer></app-footer>
     </v-app>
 </template>
 <script>

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="social__wrapper">
         <v-btn icon class="social-link" v-for="social in socials" :key="social.title">
             <v-icon>{{social.icon}}</v-icon>
         </v-btn>
@@ -46,6 +46,11 @@ export default {
 
 
 <style scoped>
+.social__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .social-link {
     margin-right: 27px;
     color: var(--font-gray-3) !important;
