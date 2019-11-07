@@ -8,6 +8,8 @@
             <about-page></about-page>
 
             <skill-page></skill-page>
+
+            <statistics-page></statistics-page>
             <work-page></work-page>
 
             <contact-page></contact-page>
@@ -21,6 +23,7 @@ import SkillPage from './views/Skill'
 import AboutPage from './views/About'
 import WorkPage from './views/Work'
 import ContactPage from './views/Contact'
+import StatisticsPage from './views/Statistics'
 import FloatingMenu from '@/components/FloatingMenu'
 import AppFooter from '@/components/shared/AppFooter'
 import AppBar from '@/components/appbar/AppBar'
@@ -32,6 +35,7 @@ export default {
         WorkPage,
         ContactPage,
         FloatingMenu,
+        StatisticsPage,
         AppFooter,
         AppBar
     },

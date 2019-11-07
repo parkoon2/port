@@ -1,54 +1,47 @@
 <template>
-    <div class="app-bar" ref="appbar">
-        <v-app-bar :color="setAppbarHeader" dark :flat="this.isScrollTop">
-            <v-toolbar-title class="logo">
-                <span :style="{color: primary, fontWeight: 'bold'}">P</span>ARKOON
-            </v-toolbar-title>
+    <div>
+        <div class="app-bar" ref="appbar">
+            <v-app-bar :color="setAppbarHeader" dark :flat="this.isScrollTop">
+                <v-toolbar-title class="logo">
+                    <span :style="{color: primary, fontWeight: 'bold'}">P</span>ARKOON
+                </v-toolbar-title>
 
-            <v-spacer></v-spacer>
+                <v-spacer></v-spacer>
 
-            <div>
-                <v-btn icon class="menu-box mobile" @click.stop="toggleDrawer" :color="grayColor">
-                    <v-icon>mdi-menu</v-icon>
-                </v-btn>
-                <div class="menu-box pc">
-                    <a
-                        v-for="(item, i) in items"
-                        :key="i"
-                        text
-                        :to="item.to"
-                        class="menu-btn"
-                        active-class="active"
-                        @click.stop="scrollTo(item)"
-                    >{{item.title}}</a>
+                <div>
+                    <v-btn
+                        icon
+                        class="menu-box mobile"
+                        @click.stop="toggleDrawer"
+                        :color="grayColor"
+                    >
+                        <v-icon>mdi-menu</v-icon>
+                    </v-btn>
+                    <div class="menu-box pc">
+                        <a
+                            v-for="(item, i) in items"
+                            :key="i"
+                            text
+                            :to="item.to"
+                            class="menu-btn"
+                            active-class="active"
+                            @click.stop="scrollTo(item)"
+                        >{{item.title}}</a>
+                    </div>
                 </div>
-            </div>
-        </v-app-bar>
-        <v-navigation-drawer v-model="drawer" absolute temporary>
-            <v-btn @click.stop="toggleDrawer" icon>
-                <v-icon>mdi-close</v-icon>
-            </v-btn>
-            <v-list>
-                <v-list-item-group v-model="items" color="primary">
-                    <v-list-item v-for="(item, i) in items" :key="i">
-                        <!-- <v-list-item-icon>
-                            <v-icon v-text="item.icon"></v-icon>
-                        </v-list-item-icon>-->
-                        <v-list-item-content>
-                            <v-list-item-title v-text="item.title"></v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item>
-                </v-list-item-group>
-            </v-list>
-        </v-navigation-drawer>
+            </v-app-bar>
+        </div>
+        <app-drawer :show="isDrawerShow" :items="items" @scrollTo="scrollTo" @close="toggleDrawer"></app-drawer>
     </div>
 </template>
 
 
 
 <script>
+import AppDrawer from './AppDrawer'
+
 export default {
-    components: {},
+    components: { AppDrawer },
     computed: {
         bgColor() {
             return this.$color['--body-bg']
@@ -67,10 +60,15 @@ export default {
             return this.$color['--primary']
         }
     },
+    // watch: {
+    //     isDrawerShow() {
+    //         alert('...')
+    //     }
+    // },
     data() {
         return {
             isScrollTop: true,
-            drawer: null,
+            isDrawerShow: false,
             items: [
                 {
                     title: 'about',
@@ -84,20 +82,19 @@ export default {
                     title: 'works',
                     to: '/works'
                 }
-                // {
-                //     title: 'timeline',
-                //     to: '/timeline'
-                // },
-                // {
-                //     title: 'contact',
-                //     to: '/contact'
-                // }
             ]
         }
     },
     methods: {
         toggleDrawer() {
-            this.drawer = !this.drawer
+            this.isDrawerShow = !this.isDrawerShow
+            document.documentElement.style.overflow = this.isDrawerShow
+                ? 'hidden'
+                : 'auto'
+
+            window.scrollTo({
+                top: 0
+            })
         },
         scrollTo(item) {
             const element = document.getElementById(item.title)
@@ -145,8 +142,8 @@ export default {
 
 <style scoped>
 .app-bar {
-    z-index: 10;
     position: fixed;
+    z-index: 10;
     width: 100%;
     background: transparent;
 }

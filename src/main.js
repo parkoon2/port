@@ -6,6 +6,7 @@ import vuetify from './plugins/vuetify'
 import color from './constants/color'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import './styles/color.css'
+import axios from 'axios'
 
 Vue.use(VueGoogleMaps, {
     load: {
@@ -16,6 +17,7 @@ Vue.use(VueGoogleMaps, {
 
 Vue.config.productionTip = false
 Vue.prototype.$color = color
+Vue.prototype.$axios = axios
 
 new Vue({
     router,
