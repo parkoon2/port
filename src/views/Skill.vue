@@ -20,10 +20,10 @@ export default {
     margin-top: 120px;
     max-width: 1200px;
 }
-.page-title {
-    color: var(--font-gray-3);
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 27px;
+
+@media screen and (max-width: 600px) {
+    .skill {
+        width: 100%;
+    }
 }
 </style>

@@ -7,8 +7,8 @@
 
             <about-page></about-page>
 
-            <!-- <skill-page></skill-page>
-            <work-page></work-page>-->
+            <skill-page></skill-page>
+            <!-- <work-page></work-page> -->
 
             <!-- <contact-page></contact-page> -->
         </v-content>

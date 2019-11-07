@@ -1,5 +1,5 @@
 <template>
-    <div class="about__card" :color="cardBg">
+    <v-card class="about__card" :color="cardBg">
         <div class="about__content">
             <div class="about__info">
                 <div class="about__info--preword">PASSION</div>
@@ -36,7 +36,7 @@
 
             <social-link></social-link>
         </div>
-    </div>
+    </v-card>
 </template>
 <script>
 import SocialLink from '@/components/shared/SocialLink'
@@ -124,9 +124,7 @@ export default {
 <style scoped>
 .about__card {
     width: 100%;
-    z-index: 1;
     background: var(--card-bg);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .about__card .about__content {
     color: var(--font-gray-1);
