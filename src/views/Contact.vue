@@ -3,7 +3,7 @@
         <page-title title="CONTACT ME"></page-title>
 
         <section-divider></section-divider>
-        <div class="contact-card-container">
+        <div class="contact-card__container">
             <v-card class="contact-card" :color="cardBg">
                 <v-form v-model="valid">
                     <v-container class="contact-container">
@@ -56,7 +56,7 @@
                     </v-container>
                 </v-form>
             </v-card>
-            <v-card class="map-card" :color="cardBg">
+            <v-card class="map__card" :color="cardBg">
                 <div class="google-map-container">
                     <google-map></google-map>
                 </div>
@@ -106,7 +106,7 @@ export default {
     margin: 120px auto;
     max-width: 1200px;
 }
-.contact-card-container {
+.contact-card__container {
     display: flex;
 }
 .contact-card {
@@ -115,7 +115,7 @@ export default {
     margin-right: 20px;
     box-sizing: border-box;
 }
-.map-card {
+.map__card {
     width: 50%;
     margin-left: 20px;
 }
@@ -126,10 +126,10 @@ export default {
 }
 
 @media screen and (max-width: 960px) {
-    .contact-card-container {
+    .contact-card__container {
         flex-direction: column;
     }
-    .map-card,
+    .map__card,
     .contact-card {
         width: 100%;
         margin: 0;
@@ -137,6 +137,12 @@ export default {
     }
     .contact-card {
         margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact {
+        width: 95%;
     }
 }
 </style>
