@@ -25,7 +25,7 @@ export default {
     flex-direction: column;
     align-items: center;
     width: 70%;
-    margin: 120px auto;
+    margin: 27px auto;
     max-width: 1200px;
 }
 .about__bg {
@@ -70,6 +70,9 @@ export default {
 @media screen and (max-width: 600px) {
     .about {
         width: 95%;
+    }
+    .about__bg--triangle {
+        width: 100%;
     }
 }
 </style>

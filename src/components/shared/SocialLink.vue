@@ -1,7 +1,7 @@
 <template>
     <div class="social__wrapper">
         <v-btn icon class="social-link" v-for="social in socials" :key="social.title">
-            <v-icon>{{social.icon}}</v-icon>
+            <v-icon :color="color">{{social.icon}}</v-icon>
         </v-btn>
     </div>
 </template>
@@ -10,6 +10,7 @@
 <script>
 export default {
     name: 'social-link',
+    props: ['color'],
     data() {
         return {
             socials: [
