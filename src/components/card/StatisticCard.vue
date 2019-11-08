@@ -62,4 +62,21 @@ export default {
 .statistic__info .info__subtitle {
     font-size: 14px;
 }
+
+@media screen and (max-width: 960px) {
+    .statistic__info .info__number {
+        font-size: 42px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .statistic__info .info__number {
+        font-size: 32px;
+    }
+
+    .statistic__card {
+        width: 100%;
+        padding-bottom: 16px;
+        height: 132px;
+    }
+}
 </style>

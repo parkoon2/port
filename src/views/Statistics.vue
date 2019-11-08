@@ -101,15 +101,25 @@ export default {
 
 .statistics .statistic__wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    width: 100%;
     grid-gap: 12px;
     justify-items: center;
     align-items: center;
+}
+@media screen and (max-width: 960px) {
+    .statistics .statistic__wrapper {
+        grid-template-columns: repeat(2, minmax(240px, 1fr));
+    }
 }
 
 @media screen and (max-width: 600px) {
     .statistics {
         width: 90%;
+    }
+
+    .statistics .statistic__wrapper {
+        grid-template-columns: repeat(1, minmax(240px, 1fr));
     }
 }
 </style>
