@@ -109,4 +109,19 @@ export default {}
     color: var(--primary);
     font-size: 32px !important;
 }
+
+@media screen and (max-width: 960px) {
+    .interest__card .interest__items {
+        grid-template-columns: repeat(3, 74px);
+        grid-auto-flow: row;
+        grid-row-gap: 12px;
+        grid-column-gap: 7px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .interest__card .interest__desctiption {
+        width: 100%;
+    }
+}
 </style>

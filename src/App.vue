@@ -9,7 +9,7 @@
 
             <skill-page></skill-page>
 
-            <!-- <interest-page></interest-page> -->
+            <interest-page></interest-page>
             <!-- <statistics-page></statistics-page> -->
             <work-page></work-page>
 
