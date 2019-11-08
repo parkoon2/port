@@ -42,14 +42,10 @@ export default {
 .about__bg--triangle {
     position: absolute;
     bottom: -390px;
-    /* left: 12px; */
     left: 0;
     background: var(--body-bg);
     width: 200%;
     height: 390px;
-    /* background: red; */
-    /* border-top: 20px solid red; */
-    /* border-left: 20px solid red; */
     transform-origin: 0 100%;
     transform: rotate(-5deg);
 }
