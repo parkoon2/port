@@ -125,6 +125,7 @@ export default {
 .about__card {
     width: 100%;
     background: var(--card-bg);
+    /* height:  */
 }
 .about__card .about__content {
     color: var(--font-gray-1);

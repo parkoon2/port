@@ -1,6 +1,8 @@
 <template>
     <div class="about" id="about">
-        <div class="about__bg"></div>
+        <div class="about__bg">
+            <div class="about__bg--triangle"></div>
+        </div>
         <!-- About card -->
         <about-card></about-card>
 
@@ -30,21 +32,37 @@ export default {
     background: url('../assets/about-bg.jpg');
     background-size: cover;
     background-position: center center;
-    height: 77vh;
+    height: 620px;
     width: 100%;
     position: absolute;
     top: -230px;
     left: 0;
 }
-.about__bg::after {
+
+.about__bg--triangle {
+    position: absolute;
+    bottom: -390px;
+    /* left: 12px; */
+    left: 0;
+    background: var(--body-bg);
+    width: 200%;
+    height: 390px;
+    /* background: red; */
+    /* border-top: 20px solid red; */
+    /* border-left: 20px solid red; */
+    transform-origin: 0 100%;
+    transform: rotate(-5deg);
+}
+
+/* .about__bg::after {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(44, 51, 64, 0.3);
+    background: rgba(44, 51, 64, 0.2);
     top: 0;
     left: 0;
-}
+} */
 
 .download-btn {
     border-color: var(--font-gray-3);
