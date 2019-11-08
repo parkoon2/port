@@ -9,6 +9,7 @@
 
             <skill-page></skill-page>
 
+            <interest-page></interest-page>
             <statistics-page></statistics-page>
             <work-page></work-page>
 
@@ -24,6 +25,7 @@ import AboutPage from './views/About'
 import WorkPage from './views/Work'
 import ContactPage from './views/Contact'
 import StatisticsPage from './views/Statistics'
+import InterestPage from './views/Interest'
 import FloatingMenu from '@/components/FloatingMenu'
 import AppFooter from '@/components/shared/AppFooter'
 import AppBar from '@/components/appbar/AppBar'
@@ -37,6 +39,7 @@ export default {
         FloatingMenu,
         StatisticsPage,
         AppFooter,
+        InterestPage,
         AppBar
     },
     computed: {

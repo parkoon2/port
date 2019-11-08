@@ -11,18 +11,22 @@
                 title="AGE"
                 subtitle="day from the born"
             ></statistic-card>
-            <statistic-card
-                :data="totalRepo"
-                icon="mdi-floppy"
-                title="GIT REPO"
-                subtitle="total count of repository"
-            ></statistic-card>
+
+            <template v-if="isCountingRepoDone">
+                <statistic-card
+                    :data="totalRepo"
+                    icon="mdi-floppy"
+                    title="GIT REPO"
+                    subtitle="total count of repository"
+                ></statistic-card>
+            </template>
             <statistic-card
                 data="14"
                 icon="mdi-briefcase"
                 title="PROJECTS"
                 :subtitle="projectFromNow"
             ></statistic-card>
+
             <statistic-card
                 :data="careerFromNow"
                 icon="mdi-account-badge-horizontal-outline"
@@ -36,7 +40,7 @@
 <script>
 import SectionDivider from '@/components/shared/SectionDivider'
 import PageTitle from '@/components/PageTitle'
-import StatisticCard from '@/components/statistics/StatisticCard'
+import StatisticCard from '@/components/card/StatisticCard'
 
 import moment from 'moment'
 
@@ -59,7 +63,8 @@ export default {
 
     data() {
         return {
-            totalRepo: 0
+            totalRepo: 0,
+            isCountingRepoDone: false
         }
     },
     methods: {
@@ -71,17 +76,12 @@ export default {
         }
     },
     async mounted() {
-        console.log(
-            moment('19900917', 'YYYYMMDD')
-                .startOf('day')
-                .fromNow()
-        )
-
         for (let i = 1; i > 0; i++) {
             let count = await this.getGithubRepoCount(page)
             if (count === 0) {
                 i = -1
                 this.totalRepo = totalCount
+                this.isCountingRepoDone = true
             } else {
                 page++
                 totalCount += count

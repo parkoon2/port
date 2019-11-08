@@ -1,7 +1,7 @@
 <template>
-    <div class="statistic__card">
+    <div class="statistic__card" ref="statistic-card">
         <div class="statistic__info">
-            <div class="info__number">{{data}}</div>
+            <div class="info__number" ref="number">{{data}}</div>
             <div class="info__title">
                 <v-icon>{{icon}}</v-icon>
                 {{title}}
@@ -12,9 +12,25 @@
 </template>
 
 <script>
+import { CountUp } from 'countup.js'
+
 export default {
     name: 'statistic-card',
-    props: ['data', 'title', 'subtitle', 'icon']
+    props: ['data', 'title', 'subtitle', 'icon'],
+
+    mounted() {
+        var countUp = new CountUp(this.$refs.number, this.data)
+        countUp.start()
+
+        window.addEventListener('scroll', () => {
+            if (
+                this.$refs['statistic-card'].offsetTop <=
+                window.scrollY + window.innerHeight - 76
+            ) {
+                console.log('dz')
+            }
+        })
+    }
 }
 </script>
 <style scoped>
