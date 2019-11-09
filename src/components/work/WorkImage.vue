@@ -7,6 +7,7 @@
                 </v-row>
             </template>
         </v-img>
+        <!-- <img class="work-image" :src="src" /> -->
         <div class="work-info">
             <div class="work-titles">
                 <h2>{{title}}</h2>

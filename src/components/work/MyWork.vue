@@ -310,10 +310,28 @@ export default {
 }
 
 .image__grid .image-box {
-    /* width: 100%; */
-    background: red;
+    position: relative;
 }
 
+.image__grid:hover .image-box:not(:hover):after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* .image__grid .image-box:hover .work-image::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: rgba(0, 0, 0, 0.7);
+} */
 .image__grid .image-box:first-child {
     grid-column: span 2;
     grid-row: span 2;
