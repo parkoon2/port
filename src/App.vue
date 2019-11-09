@@ -7,6 +7,8 @@
 
             <about-page></about-page>
 
+            <side-project-page></side-project-page>
+
             <skill-page></skill-page>
 
             <interest-page></interest-page>
@@ -25,6 +27,7 @@ import AboutPage from './views/About'
 import WorkPage from './views/Work'
 import ContactPage from './views/Contact'
 import StatisticsPage from './views/Statistics'
+import SideProjectPage from './views/SideProject'
 import InterestPage from './views/Interest'
 import FloatingMenu from '@/components/FloatingMenu'
 import AppFooter from '@/components/shared/AppFooter'
@@ -38,6 +41,7 @@ export default {
         ContactPage,
         FloatingMenu,
         StatisticsPage,
+        SideProjectPage,
         AppFooter,
         InterestPage,
         AppBar
