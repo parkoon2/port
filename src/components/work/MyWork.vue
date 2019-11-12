@@ -158,8 +158,8 @@
         </v-row>
         <v-row>
             <v-col class="more-btn-box">
-                <app-button icon="mdi-plus" :color="gray"></app-button>
-                <!-- <v-btn icon outlined large :color="gray" class="more-btn">
+                <app-button icon="mdi-plus" :color="grey"></app-button>
+                <!-- <v-btn icon outlined large :color="grey" class="more-btn">
                     <v-icon class="plus-icon"></v-icon>
                 </v-btn>-->
             </v-col>
@@ -257,8 +257,8 @@ export default {
         }
     },
     computed: {
-        gray() {
-            return this.$color['--font-gray-3']
+        grey() {
+            return this.$color['--font-grey-3']
         },
         cardBg() {
             return this.$color['--card-bg']
@@ -288,7 +288,7 @@ export default {
 }
 
 .tag__title {
-    color: var(--font-gray-1);
+    color: var(--font-grey-1);
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;

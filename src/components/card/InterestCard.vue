@@ -52,7 +52,7 @@ export default {}
 
 .interest__card .interest__desctiption {
     width: 70%;
-    color: var(--font-gray-1);
+    color: var(--font-grey-1);
     text-align: center;
     margin-bottom: 32px;
 }
@@ -78,7 +78,7 @@ export default {}
 }
 
 .interest__card .interest__items .item__icon .icon__desc {
-    color: var(--font-gray-1);
+    color: var(--font-grey-1);
     padding: 3px 12px;
     background: rgba(0, 0, 0, 0.6);
     font-size: 12px;

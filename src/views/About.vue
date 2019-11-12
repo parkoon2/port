@@ -61,8 +61,8 @@ export default {
 } */
 
 .download-btn {
-    border-color: var(--font-gray-3);
-    color: var(--font-gray-3);
+    border-color: var(--font-grey-3);
+    color: var(--font-grey-3);
     margin-top: 72px;
     width: 200px;
 }

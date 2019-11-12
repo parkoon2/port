@@ -219,7 +219,7 @@ export default {
     right: 0;
     bottom: 0;
     content: '';
-    background: var(--font-gray-1);
+    background: var(--font-grey-1);
     opacity: 0;
     transition: 0.3s;
     z-index: 0;
@@ -286,7 +286,7 @@ export default {
     background: var(--primary);
 }
 .side-project__item .item__info .info__btns .info__btn:hover i {
-    color: var(--font-gray-1);
+    color: var(--font-grey-1);
 }
 
 .side-project__item .item__info .info__btns i {

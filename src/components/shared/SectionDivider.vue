@@ -18,7 +18,7 @@
 .devider__wrapper .divider {
     width: 32px;
     height: 1px;
-    background: var(--font-gray-3);
+    background: var(--font-grey-3);
     /* margin: 72px 0; */
 }
 
@@ -26,7 +26,7 @@
     margin: 0 7px;
     width: 8px;
     height: 8px;
-    background: var(--font-gray-3);
+    background: var(--font-grey-3);
     transform: rotate(45deg);
 }
 

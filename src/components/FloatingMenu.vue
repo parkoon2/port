@@ -19,7 +19,7 @@
             <v-icon left style="flex: 1">mdi-briefcase</v-icon>
             <span style="flex: 2">WORKS</span>
         </v-btn>
-        <v-btn class="mt-2" tile outlined :color="gray" width="120">
+        <v-btn class="mt-2" tile outlined :color="grey" width="120">
             <v-icon left style="flex: 1">mdi-arrow-up</v-icon>
             <span style="flex: 2">TOP</span>
         </v-btn>
@@ -31,8 +31,8 @@ import { mapGetters } from 'vuex'
 export default {
     name: 'floating-menu',
     computed: {
-        gray() {
-            return this.$color['--font-gray-3']
+        grey() {
+            return this.$color['--font-grey-3']
         },
         primary() {
             return this.$color['--primary']

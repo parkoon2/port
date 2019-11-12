@@ -81,7 +81,7 @@ export default {
     display: inline-block;
     width: 50%;
     padding: 15px;
-    color: var(--font-gray-3);
+    color: var(--font-grey-3);
 }
 
 .skill-inner .skill-title {

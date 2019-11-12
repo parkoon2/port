@@ -13,7 +13,7 @@
                         icon
                         class="menu-box mobile"
                         @click.stop="toggleDrawer"
-                        :color="grayColor"
+                        :color="greyColor"
                     >
                         <v-icon>mdi-menu</v-icon>
                     </v-btn>
@@ -46,8 +46,8 @@ export default {
         bgColor() {
             return this.$color['--body-bg']
         },
-        grayColor() {
-            return this.$color['--font-gray-3']
+        greyColor() {
+            return this.$color['--font-grey-3']
         },
         setAppbarHeader() {
             if (this.isScrollTop) {
@@ -157,7 +157,7 @@ export default {
     display: none;
 }
 .menu-btn {
-    color: var(--font-gray-3);
+    color: var(--font-grey-3);
     text-transform: uppercase;
     text-decoration-line: none;
     font-weight: bold;

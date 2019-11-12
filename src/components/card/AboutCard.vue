@@ -119,7 +119,7 @@
                 </p>
                 <p class="about__info--subtitle">Frontend & Backend Developer</p>
 
-                <v-divider :color="lightGray"></v-divider>
+                <v-divider :color="lightgrey"></v-divider>
 
                 <ul class="photo__desc---list">
                     <li v-for="info in infos" :key="info.title">
@@ -156,8 +156,8 @@ export default {
         cardBg() {
             return this.$color['--card-bg']
         },
-        lightGray() {
-            return this.$color['--font-gray-3']
+        lightgrey() {
+            return this.$color['--font-grey-3']
         },
         me() {
             return this.hoverOnMe ? hireMe : me
@@ -236,7 +236,7 @@ export default {
     grid-template-columns: 1fr 1fr;
     grid-gap: 12px;
 
-    color: var(--font-gray-2);
+    color: var(--font-grey-2);
 }
 
 .about__card .about__photo {
@@ -322,7 +322,7 @@ export default {
 
 .photo__desc---list li .list-value {
     grid-column: span 3;
-    color: var(--font-gray-3);
+    color: var(--font-grey-3);
 }
 
 .about__photo .about__photo--subtitle {
@@ -360,13 +360,13 @@ export default {
 }
 
 .about__info::-webkit-scrollbar-thumb {
-    background-color: var(--font-gray-1);
+    background-color: var(--font-grey-1);
     border-radius: 7px;
 }
 
 .about__info .info__title {
-    border-bottom: 2px solid gray;
-    color: var(--font-gray-1);
+    border-bottom: 2px solid grey;
+    color: var(--font-grey-1);
     margin-bottom: 32px;
 }
 
@@ -394,7 +394,7 @@ export default {
 
 .about__info .info__categories .category__item .item__desc {
     position: relative;
-    border: 1px solid var(--font-gray-2);
+    border: 1px solid var(--font-grey-2);
     padding: 14px;
 }
 
@@ -406,16 +406,16 @@ export default {
     left: 2px;
     right: 2px;
     bottom: 2px;
-    border: 1px solid var(--font-gray-2);
+    border: 1px solid var(--font-grey-2);
 }
 
 .about__info .info__categories .category__item .item__desc .desc__title {
     font-weight: bold;
     font-size: 24px;
-    color: var(--font-gray-1);
+    color: var(--font-grey-1);
 }
 .about__info .info__categories .category__item .item__desc .desc__subtitle {
-    border-bottom: 1px solid var(--font-gray-3);
+    border-bottom: 1px solid var(--font-grey-3);
     padding-bottom: 4px;
     margin-bottom: 12px;
     font-weight: normal;

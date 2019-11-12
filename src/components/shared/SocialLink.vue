@@ -54,7 +54,7 @@ export default {
 }
 .social-link {
     margin-right: 27px;
-    color: var(--font-gray-3) !important;
+    color: var(--font-grey-3) !important;
     transition: background 0.2s ease-in-out;
 }
 .social-link:hover {

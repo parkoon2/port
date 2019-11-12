@@ -18,7 +18,7 @@ export default {
     align-items: center;
     width: 45px;
     height: 45px;
-    border: 1px solid var(--font-gray-2);
+    border: 1px solid var(--font-grey-2);
     transition: 0.2s;
     cursor: pointer;
 }

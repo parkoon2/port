@@ -38,7 +38,7 @@ export default {
     border-bottom: 4px solid rgba(0, 0, 0, 0.3);
     height: 142px;
     width: 240px;
-    color: var(--font-gray-1);
+    color: var(--font-grey-1);
     padding-bottom: 32px;
     box-sizing: border-box;
 }
@@ -49,7 +49,7 @@ export default {
 }
 
 .statistic__info .info__title i {
-    color: var(--font-gray-1);
+    color: var(--font-grey-1);
     font-size: 20px;
     margin-right: 4px;
 }

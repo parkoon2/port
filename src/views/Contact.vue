@@ -15,7 +15,7 @@
                                         :rules="nameRules"
                                         label="your name"
                                         required
-                                        :color="gray"
+                                        :color="grey"
                                     ></v-text-field>
                                 </v-col>
 
@@ -25,7 +25,7 @@
                                         :rules="emailRules"
                                         label="e-mail"
                                         required
-                                        :color="gray"
+                                        :color="grey"
                                     ></v-text-field>
                                 </v-col>
 
@@ -35,7 +35,7 @@
                                         :rules="titleRules"
                                         label="title"
                                         required
-                                        :color="gray"
+                                        :color="grey"
                                     ></v-text-field>
                                 </v-col>
 
@@ -44,12 +44,12 @@
                                         :rules="messageRules"
                                         required
                                         label="message"
-                                        :color="gray"
+                                        :color="grey"
                                         no-resize
                                     ></v-textarea>
                                 </v-col>
                                 <v-card-actions class="contact-actions">
-                                    <v-btn :color="gray" outlined>SEND</v-btn>
+                                    <v-btn :color="grey" outlined>SEND</v-btn>
                                 </v-card-actions>
                             </v-row>
                         </div>
@@ -77,8 +77,8 @@ export default {
         cardBg() {
             return this.$color['--card-bg']
         },
-        gray() {
-            return this.$color['--font-gray-2']
+        grey() {
+            return this.$color['--font-grey-2']
         },
         primary() {
             return this.$color['--primary']

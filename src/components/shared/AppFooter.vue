@@ -32,7 +32,7 @@ export default {
             return this.$color['--body-bg']
         },
         grey() {
-            return this.$color['--font-gray-1']
+            return this.$color['--font-grey-1']
         }
     },
     data() {
@@ -49,7 +49,7 @@ export default {
     position: relative;
     height: 270px;
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3), 0 7px 12px rgba(0, 0, 0, 0.22);
-    color: var(--font-gray-1);
+    color: var(--font-grey-1);
     background: var(--body-bg);
 }
 .footer .footer__title-box {
@@ -100,7 +100,7 @@ export default {
 .footer .footer__title-box .footer__title--line {
     width: 120px;
     height: 2px;
-    background: var(--font-gray-1);
+    background: var(--font-grey-1);
 }
 .footer .footer__title-box .footer__title--line:first-child {
     margin-right: 15px;

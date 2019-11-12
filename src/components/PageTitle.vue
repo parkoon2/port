@@ -12,14 +12,14 @@ export default {
 </script>
 <style scoped>
 .page__title h1 {
-    color: var(--font-gray-1);
+    color: var(--font-grey-1);
     font-size: 42px;
     margin: 0;
     text-align: center;
 }
 
 .page__title p {
-    color: var(--font-gray-3);
+    color: var(--font-grey-3);
 }
 
 @media screen and (max-width: 600px) {

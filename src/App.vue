@@ -15,7 +15,7 @@
             <statistics-page></statistics-page>
             <work-page></work-page>
 
-            <contact-page></contact-page>
+            <!-- <contact-page></contact-page> -->
         </v-content>
         <!-- <floating-menu></floating-menu> -->
         <app-footer></app-footer>

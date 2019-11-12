@@ -64,7 +64,7 @@ export default {
 }
 
 .drawer .drawer__menu {
-    color: var(--font-gray-1);
+    color: var(--font-grey-1);
     text-transform: uppercase;
     font-size: 30px;
     margin-bottom: 17px;
@@ -76,7 +76,7 @@ export default {
 }
 
 .drawer .drawer__menu:hover {
-    color: var(--font-gray-2);
+    color: var(--font-grey-2);
     background: rgba(0, 0, 0, 0.1);
 }
 
@@ -98,6 +98,6 @@ export default {
 }
 
 .drawer .drawer__icon i {
-    color: var(--font-gray-1);
+    color: var(--font-grey-1);
 }
 </style>
