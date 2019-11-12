@@ -1,6 +1,12 @@
 <template>
     <div class="social__wrapper">
-        <v-btn icon class="social-link" v-for="social in socials" :key="social.title">
+        <v-btn
+            icon
+            class="social-link"
+            v-for="social in socials"
+            :key="social.title"
+            @click="linkTo(social.link)"
+        >
             <v-icon :color="color">{{social.icon}}</v-icon>
         </v-btn>
     </div>
@@ -8,38 +14,19 @@
 
 
 <script>
+import { social } from '../../data'
+import { openNewWindow } from '../../helper/util'
 export default {
     name: 'social-link',
     props: ['color'],
     data() {
         return {
-            socials: [
-                {
-                    title: 'github',
-                    icon: 'mdi-github-box',
-                    link: '/'
-                },
-                {
-                    title: 'twitter',
-                    icon: 'mdi-twitter',
-                    link: '/'
-                },
-                {
-                    title: 'faceboock',
-                    icon: 'mdi-facebook',
-                    link: '/'
-                },
-                {
-                    title: 'blog',
-                    icon: 'mdi-blogger',
-                    link: '/'
-                },
-                {
-                    title: 'instagram',
-                    icon: 'mdi-instagram',
-                    link: '/'
-                }
-            ]
+            socials: social
+        }
+    },
+    methods: {
+        linkTo(link) {
+            openNewWindow(link)
         }
     }
 }
