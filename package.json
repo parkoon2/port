@@ -14,6 +14,7 @@
     "owl.carousel": "^2.3.4",
     "vue": "^2.6.10",
     "vue-router": "^3.0.6",
+    "vue-typer": "^1.2.0",
     "vue2-google-maps": "^0.10.7",
     "vuetify": "^2.1.0",
     "vuex": "^3.0.1"

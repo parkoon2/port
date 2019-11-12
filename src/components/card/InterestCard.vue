@@ -1,8 +1,14 @@
 <template>
     <div class="interest__card">
-        <div
-            class="interest__desctiption"
-        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tenetur nostrum veniam dolores? Est voluptates beatae vero? Aspernatur obcaecati explicabo blanditiis, qui laboriosam sit necessitatibus, quam dolorem vel atque consequatur!</div>
+        <div class="interest__desctiption">
+            <vue-typer
+                :pre-type-delay="70"
+                :type-delay="100"
+                text="테니스를 사랑하는 프론트&백엔드 개발자입니다. 
+            최근에는 리액트, 뷰와 같은 UI 프레임워크에 관심을 갖고 공부하고 있습니다. 
+            퇴근 후 그리고 주말에는 테니스를 즐겨합니다."
+            ></vue-typer>
+        </div>
 
         <div class="interest__items">
             <div class="item__icon">
@@ -55,6 +61,7 @@ export default {}
     color: var(--font-grey-1);
     text-align: center;
     margin-bottom: 32px;
+    height: 80px;
 }
 
 .interest__card .interest__items {

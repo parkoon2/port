@@ -142,7 +142,7 @@ export default {
 
 <style scoped>
 .about__card {
-    z-index: 200;
+    z-index: 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 12px;

@@ -7,10 +7,11 @@ import color from './constants/color'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import './styles/color.css'
 import axios from 'axios'
+import VueTyperPlugin from 'vue-typer'
 
 import 'owl.carousel/dist/assets/owl.carousel.css'
 import 'owl.carousel'
-
+Vue.use(VueTyperPlugin)
 Vue.use(VueGoogleMaps, {
     load: {
         key: 'AIzaSyAvAEiAWg5YfiN0DyGb480cWQ2JDxnKFI4',

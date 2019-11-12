@@ -25,3 +25,12 @@
     background-color: var(--primary);
     border-radius: 7px;
 }
+
+.vue-typer .custom.char.typed {
+    color: var(--font-grey-1);
+    letter-spacing: 2px;
+}
+
+.vue-typer .custom.caret.typing {
+    background-color: var(--font-grey-1);
+}
