@@ -32,3 +32,68 @@ export const social = [
         link: 'https://www.instagram.com/devparkoon'
     }
 ]
+
+// ------- 사이드 프로젝트 -------
+export const sideProjects = [
+    {
+        title: 'CSS Layout practice',
+        subtitle: 'feat, nomard corder',
+        demo: 'https://parkoon.github.io/css-real-world',
+        git: 'https://github.com/parkoon/css-real-world',
+        image: require('../assets/projects/css-real-world.jpg')
+    },
+    {
+        title: 'Clone Coding (Megabox)',
+        subtitle: 'React & Context API',
+        demo: 'https://parkoon.github.io/cc-nexon',
+        git: 'https://github.com/parkoon/cc-nexon',
+        image: require('../assets/projects/clone-megabox.jpg')
+    },
+    {
+        title: 'Window 95 style portfolio',
+        subtitle: 'React & Next',
+        demo: '',
+        git: 'https://github.com/parkoon/window95',
+        image: require('../assets/projects/window95.jpg')
+    }
+]
+
+// ------- 스킬 -------
+export const skills = [
+    {
+        name: 'html',
+        level: 92
+    },
+    {
+        name: 'css',
+        level: 85
+    },
+    {
+        name: 'javascript',
+        level: 90
+    },
+    {
+        name: 'react',
+        level: 87
+    },
+    {
+        name: 'vue',
+        level: 72
+    },
+    {
+        name: 'jQuery',
+        level: 70
+    },
+    {
+        name: 'node',
+        level: 87
+    },
+    {
+        name: 'mongodb',
+        level: 60
+    },
+    {
+        name: 'postgresql',
+        level: 55
+    }
+]

@@ -6,8 +6,8 @@
         <section-divider></section-divider>
         <v-card>
             <div class="skill-container">
-                <div class="skill-inner" v-for="skill in skills" :key="skill.title">
-                    <h2 class="skill-title">{{skill.title}}</h2>
+                <div class="skill-inner" v-for="skill in skills" :key="skill.name">
+                    <h2 class="skill-title">{{skill.name}}</h2>
                     <v-progress-linear :value="skill.level" height="17" :color="primary"></v-progress-linear>
                     <div class="skill-level">{{skill.level}}%</div>
                 </div>
@@ -19,6 +19,7 @@
 <script>
 import PageTitle from '@/components/PageTitle'
 import SectionDivider from '@/components/shared/SectionDivider'
+import { skills } from '../../data'
 export default {
     name: 'skill-card',
     components: {
@@ -32,40 +33,7 @@ export default {
     },
     data() {
         return {
-            skills: [
-                {
-                    title: 'HTML',
-                    level: 80
-                },
-                {
-                    title: 'CSS',
-                    level: 90
-                },
-                {
-                    title: 'Javascript',
-                    level: 90
-                },
-                {
-                    title: 'jQuery',
-                    level: 70
-                },
-                {
-                    title: 'React',
-                    level: 80
-                },
-                {
-                    title: 'Vue',
-                    level: 60
-                },
-                {
-                    title: 'MongoDB',
-                    level: 70
-                },
-                {
-                    title: 'Node.js',
-                    level: 70
-                }
-            ]
+            skills: skills
         }
     }
 }

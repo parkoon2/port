@@ -163,6 +163,7 @@ export default {
 }
 .about__photo {
     position: relative;
+    padding-bottom: 70px;
 }
 .about__photo hr {
     width: 62%;
@@ -256,7 +257,6 @@ export default {
 .about__photo .about__photo--desc {
     width: 77%;
     text-align: center;
-    margin-bottom: 24px;
 }
 
 .about__photo .about__photo--social {
@@ -370,6 +370,9 @@ export default {
 
     .about__card .about__info {
         height: 520px;
+    }
+    .about__photo .about__photo--social {
+        padding: 7px;
     }
 }
 @media screen and (max-width: 600px) {

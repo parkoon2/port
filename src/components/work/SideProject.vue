@@ -1,162 +1,26 @@
 <template>
     <div class="side-project__wrapper">
         <div class="owl-carousel owl-theme">
-            <div class="side-project__item">
+            <div class="side-project__item" v-for="p in sideProjects" :key="p.title">
+                <img :src="p.image" />
+
                 <div class="item__info">
                     <div class="title__group">
-                        <h1 class="info__title">Lorem</h1>
-                        <div class="info__subtitle">Using react and redux</div>
+                        <h1 class="info__title">{{p.title}}</h1>
+                        <div class="info__subtitle">{{p.subtitle}}</div>
                     </div>
 
                     <div class="info__btns">
-                        <div class="info__btn info__btn--more">
+                        <!-- <div class="info__btn info__btn--more">
                             <v-icon>mdi-dots-horizontal</v-icon>
+                        </div>-->
+                        <div class="info__btn info__btn--github" @click="linkTo(p.git)">
+                            <!-- <v-icon>mdi-github-circle</v-icon> -->
+                            SOURCE
                         </div>
-                        <div class="info__btn info__btn--github">
-                            <v-icon>mdi-github-circle</v-icon>
-                        </div>
-                        <div class="info__btn intfo__btn--demo">
-                            <v-icon>mdi-eye</v-icon>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="side-project__item">
-                <div class="item__info">
-                    <div class="title__group">
-                        <h1 class="info__title">Lorem</h1>
-                        <div class="info__subtitle">Using react and redux</div>
-                    </div>
-
-                    <div class="info__btns">
-                        <div class="info__btn info__btn--more">
-                            <v-icon>mdi-dots-horizontal</v-icon>
-                        </div>
-                        <div class="info__btn info__btn--github">
-                            <v-icon>mdi-github-circle</v-icon>
-                        </div>
-                        <div class="info__btn intfo__btn--demo">
-                            <v-icon>mdi-eye</v-icon>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="side-project__item">
-                <div class="item__info">
-                    <div class="title__group">
-                        <h1 class="info__title">Lorem</h1>
-                        <div class="info__subtitle">Using react and redux</div>
-                    </div>
-
-                    <div class="info__btns">
-                        <div class="info__btn info__btn--more">
-                            <v-icon>mdi-dots-horizontal</v-icon>
-                        </div>
-                        <div class="info__btn info__btn--github">
-                            <v-icon>mdi-github-circle</v-icon>
-                        </div>
-                        <div class="info__btn intfo__btn--demo">
-                            <v-icon>mdi-eye</v-icon>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="side-project__item">
-                <div class="item__info">
-                    <div class="title__group">
-                        <h1 class="info__title">Lorem</h1>
-                        <div class="info__subtitle">Using react and redux</div>
-                    </div>
-
-                    <div class="info__btns">
-                        <div class="info__btn info__btn--more">
-                            <v-icon>mdi-dots-horizontal</v-icon>
-                        </div>
-                        <div class="info__btn info__btn--github">
-                            <v-icon>mdi-github-circle</v-icon>
-                        </div>
-                        <div class="info__btn intfo__btn--demo">
-                            <v-icon>mdi-eye</v-icon>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="side-project__item">
-                <div class="item__info">
-                    <div class="title__group">
-                        <h1 class="info__title">Lorem</h1>
-                        <div class="info__subtitle">Using react and redux</div>
-                    </div>
-
-                    <div class="info__btns">
-                        <div class="info__btn info__btn--more">
-                            <v-icon>mdi-dots-horizontal</v-icon>
-                        </div>
-                        <div class="info__btn info__btn--github">
-                            <v-icon>mdi-github-circle</v-icon>
-                        </div>
-                        <div class="info__btn intfo__btn--demo">
-                            <v-icon>mdi-eye</v-icon>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="side-project__item">
-                <div class="item__info">
-                    <div class="title__group">
-                        <h1 class="info__title">Lorem</h1>
-                        <div class="info__subtitle">Using react and redux</div>
-                    </div>
-
-                    <div class="info__btns">
-                        <div class="info__btn info__btn--more">
-                            <v-icon>mdi-dots-horizontal</v-icon>
-                        </div>
-                        <div class="info__btn info__btn--github">
-                            <v-icon>mdi-github-circle</v-icon>
-                        </div>
-                        <div class="info__btn intfo__btn--demo">
-                            <v-icon>mdi-eye</v-icon>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="side-project__item">
-                <div class="item__info">
-                    <div class="title__group">
-                        <h1 class="info__title">Lorem</h1>
-                        <div class="info__subtitle">Using react and redux</div>
-                    </div>
-
-                    <div class="info__btns">
-                        <div class="info__btn info__btn--more">
-                            <v-icon>mdi-dots-horizontal</v-icon>
-                        </div>
-                        <div class="info__btn info__btn--github">
-                            <v-icon>mdi-github-circle</v-icon>
-                        </div>
-                        <div class="info__btn intfo__btn--demo">
-                            <v-icon>mdi-eye</v-icon>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="side-project__item">
-                <div class="item__info">
-                    <div class="title__group">
-                        <h1 class="info__title">Lorem</h1>
-                        <div class="info__subtitle">Using react and redux</div>
-                    </div>
-
-                    <div class="info__btns">
-                        <div class="info__btn info__btn--more">
-                            <v-icon>mdi-dots-horizontal</v-icon>
-                        </div>
-                        <div class="info__btn info__btn--github">
-                            <v-icon>mdi-github-circle</v-icon>
-                        </div>
-                        <div class="info__btn intfo__btn--demo">
-                            <v-icon>mdi-eye</v-icon>
+                        <div class="info__btn info__btn--demo" @click="linkTo(p.demo)">
+                            <!-- <v-icon>mdi-eye</v-icon> -->
+                            DEMO
                         </div>
                     </div>
                 </div>
@@ -166,10 +30,23 @@
 </template>
 
 <script>
+import { sideProjects } from '../../data'
+import { openNewWindow } from '../../helper/util'
 export default {
+    data() {
+        return {
+            sideProjects: sideProjects
+        }
+    },
+    methods: {
+        linkTo(link) {
+            if (!link) return alert('준비 중 입니다.')
+            openNewWindow(link)
+        }
+    },
     mounted() {
         $('.owl-carousel').owlCarousel({
-            loop: true,
+            // loop: true,
             // autoplay: true,
             dots: true,
             nav: false,
@@ -200,16 +77,14 @@ export default {
 
 .side-project__item {
     position: relative;
-    width: 320px;
-    height: 250px;
-    background-image: url('https://i.pinimg.com/564x/cf/96/e7/cf96e735976d22e8aef92000ec3f06b2.jpg');
-    background-size: cover;
-    background-position: center center;
     cursor: pointer;
+    width: 320px;
+    height: 200px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    /* width: 320px; */
-    /* width: 320px; */
-    /* height: 200px; */
+}
+.side-project__item img {
+    width: 100%;
+    height: 100%;
 }
 
 .side-project__item::after {
@@ -219,7 +94,7 @@ export default {
     right: 0;
     bottom: 0;
     content: '';
-    background: var(--font-grey-1);
+    background: rgba(70, 71, 71, 0.76);
     opacity: 0;
     transition: 0.3s;
     z-index: 0;
@@ -241,6 +116,7 @@ export default {
     height: 100%;
     color: var(--black);
     z-index: 9999;
+    width: 100%;
 }
 
 .side-project__item .item__info .title__group {
@@ -249,6 +125,7 @@ export default {
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
+    width: 100%;
 }
 
 .side-project__item:hover .item__info .title__group {
@@ -265,10 +142,16 @@ export default {
 
 .side-project__item .item__info .info__title {
     margin-bottom: -8px;
+    width: 100%;
+    font-size: 24px;
+    color: var(--font-grey-1);
+}
+.side-project__item .item__info .info__subtitle {
+    color: var(--font-grey-2);
 }
 .side-project__item .item__info .info__btns {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 17px;
     transform: translateY(62px);
     opacity: 0;
@@ -278,11 +161,21 @@ export default {
 .side-project__item .item__info .info__btns .info__btn {
     margin-top: 62px;
     border: 1px solid var(--primary);
-    padding: 9px;
+    padding: 9px 12px;
     transition: 0.3s;
+    text-align: center;
+    color: var(--primary);
 }
-
+/* .side-project__item .item__info .info__btns .info__btn.info__btn--demo {
+    color: var(--font-grey-1);
+    background: var(--primary);
+}
+.side-project__item .item__info .info__btns .info__btn.info__btn--demo:hover {
+    color: var(--primary);
+    background: transparent;
+} */
 .side-project__item .item__info .info__btns .info__btn:hover {
+    color: var(--font-grey-1);
     background: var(--primary);
 }
 .side-project__item .item__info .info__btns .info__btn:hover i {
