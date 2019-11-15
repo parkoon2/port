@@ -1,5 +1,13 @@
 <template>
     <div>
+        <!-- <transition name="fade"> -->
+        <div v-if="onDetail">
+            <work-detail
+                @hideDetail="hideDetail"
+                :item="selectedPrject"
+            ></work-detail>
+        </div>
+        <!-- </transition> -->
         <v-row>
             <v-col>
                 <!-- subtitle="From Web Components and UI/UX animations to React.JS, Redux, Vue.JS, and Node.JS. Check out my latest web software development portfolio projects." -->
@@ -8,7 +16,7 @@
                 <section-divider></section-divider>
             </v-col>
         </v-row>
-        <v-row>
+        <!-- <v-row>
             <v-col class="tag__box">
                 <v-chip
                     pill
@@ -20,150 +28,29 @@
                     <span class="tag__title">{{tag.title}}</span>
                 </v-chip>
             </v-col>
-        </v-row>
+        </v-row>-->
         <v-row class="image__grid">
-            <div class="image-box">
+            <div
+                class="image-box"
+                v-for="project in projects"
+                :key="project.id"
+            >
                 <work-image
-                    :id="1"
-                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
-                    :title="3"
-                    :subtitle="4"
-                    :git="5"
-                    :demo="6"
-                    :tags="7"
+                    :src="project.images[0]"
+                    :title="project.title"
+                    :subtitle="project.subtitle"
+                    :git="project.git"
+                    :demo="project.demo"
+                    @showDetail="showDetail(project.id)"
+                    @hideDetail="hideDetail"
                 ></work-image>
             </div>
-            <div class="image-box">
-                <work-image
-                    :id="1"
-                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
-                    :title="3"
-                    :subtitle="4"
-                    :git="5"
-                    :demo="6"
-                    :tags="7"
-                ></work-image>
-            </div>
-            <div class="image-box">
-                <work-image
-                    :id="1"
-                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
-                    :title="3"
-                    :subtitle="4"
-                    :git="5"
-                    :demo="6"
-                    :tags="7"
-                ></work-image>
-            </div>
-            <div class="image-box">
-                <work-image
-                    :id="1"
-                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
-                    :title="3"
-                    :subtitle="4"
-                    :git="5"
-                    :demo="6"
-                    :tags="7"
-                ></work-image>
-            </div>
-            <div class="image-box">
-                <work-image
-                    :id="1"
-                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
-                    :title="3"
-                    :subtitle="4"
-                    :git="5"
-                    :demo="6"
-                    :tags="7"
-                ></work-image>
-            </div>
-            <div class="image-box">
-                <work-image
-                    :id="1"
-                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
-                    :title="3"
-                    :subtitle="4"
-                    :git="5"
-                    :demo="6"
-                    :tags="7"
-                ></work-image>
-            </div>
-            <div class="image-box">
-                <work-image
-                    :id="1"
-                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
-                    :title="3"
-                    :subtitle="4"
-                    :git="5"
-                    :demo="6"
-                    :tags="7"
-                ></work-image>
-            </div>
-            <div class="image-box">
-                <work-image
-                    :id="1"
-                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
-                    :title="3"
-                    :subtitle="4"
-                    :git="5"
-                    :demo="6"
-                    :tags="7"
-                ></work-image>
-            </div>
-            <div class="image-box">
-                <work-image
-                    :id="1"
-                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
-                    :title="3"
-                    :subtitle="4"
-                    :git="5"
-                    :demo="6"
-                    :tags="7"
-                ></work-image>
-            </div>
-            <div class="image-box">
-                <work-image
-                    :id="1"
-                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
-                    :title="3"
-                    :subtitle="4"
-                    :git="5"
-                    :demo="6"
-                    :tags="7"
-                ></work-image>
-            </div>
-            <div class="image-box">
-                <work-image
-                    :id="1"
-                    :src="'https://i.pinimg.com/564x/6c/bc/c4/6cbcc475b8ebc1e60e6beb0457ac1e60.jpg'"
-                    :title="3"
-                    :subtitle="4"
-                    :git="5"
-                    :demo="6"
-                    :tags="7"
-                ></work-image>
-            </div>
-
-            <!-- <v-col v-for="work in works" :key="work.id" sm="6" md="4" xs="12" class="image-box">
-                <work-image
-                    :id="work.id"
-                    :src="work.image"
-                    :title="work.title"
-                    :subtitle="work.subtitle"
-                    :git="work.git"
-                    :demo="work.demo"
-                    :tags="work.tags"
-                ></work-image>
-            </v-col>-->
         </v-row>
-        <v-row>
+        <!-- <v-row>
             <v-col class="more-btn-box">
                 <app-button icon="mdi-plus" :color="grey"></app-button>
-                <!-- <v-btn icon outlined large :color="grey" class="more-btn">
-                    <v-icon class="plus-icon"></v-icon>
-                </v-btn>-->
             </v-col>
-        </v-row>
+        </v-row> -->
     </div>
 </template>
 <script>
@@ -171,89 +58,22 @@ import WorkImage from './WorkImage'
 import PageTitle from '@/components/PageTitle'
 import AppButton from '@/components/AppButton'
 import SectionDivider from '@/components/shared/SectionDivider'
+import WorkDetail from './WorkDetail'
+import { mainProjects } from '../../data'
 export default {
     name: 'my-work',
     components: {
         WorkImage,
         PageTitle,
         AppButton,
-        SectionDivider
+        SectionDivider,
+        WorkDetail
     },
     data() {
         return {
-            works: [
-                {
-                    id: '1',
-                    title: 'LG A+ CES Show APP',
-                    subtitle: 'TV Aplication for CES show',
-                    image: 'https://picsum.photos/500/300?image=1',
-                    git: 'https://github.com/parkoon',
-                    demo: 'https://github.com/parkoon',
-                    tags: ['enact', 'javascript']
-                },
-                {
-                    id: '2',
-                    title: 'LG A+ CES Show APP',
-                    subtitle: 'TV Aplication for CES show',
-                    image: 'https://picsum.photos/500/300?image=2',
-                    git: 'https://github.com/parkoon',
-                    demo: 'https://github.com/parkoon',
-                    tags: ['enact', 'html']
-                },
-                {
-                    id: '3',
-                    title: 'LG A+ CES Show APP',
-                    subtitle: 'TV Aplication for CES show',
-                    image: 'https://picsum.photos/500/300?image=3',
-                    git: 'https://github.com/parkoon',
-                    demo: 'https://github.com/parkoon',
-                    tags: ['enact', 'css']
-                },
-                {
-                    id: '4',
-                    title: 'LG A+ CES Show APP',
-                    subtitle: 'TV Aplication for CES show',
-                    image: 'https://picsum.photos/500/300?image=4',
-                    git: 'https://github.com/parkoon',
-                    demo: 'https://github.com/parkoon',
-                    tags: ['enact', 'view']
-                }
-            ],
-            tags: [
-                {
-                    title: 'view-all'
-                },
-                {
-                    title: 'front-end'
-                },
-                {
-                    title: 'back-end'
-                },
-                {
-                    title: 'html'
-                },
-                {
-                    title: 'css'
-                },
-                {
-                    title: 'javascript'
-                },
-                {
-                    title: 'nodejs'
-                },
-                {
-                    title: 'reactjs'
-                },
-                {
-                    title: 'mongodb'
-                },
-                {
-                    title: 'vuejs'
-                },
-                {
-                    title: 'jquery'
-                }
-            ]
+            onDetail: false,
+            projects: mainProjects,
+            selectedPrject: null
         }
     },
     computed: {
@@ -263,10 +83,30 @@ export default {
         cardBg() {
             return this.$color['--card-bg']
         }
+    },
+    methods: {
+        showDetail(id) {
+            this.onDetail = true
+            let selectedId = mainProjects.findIndex((el, index) => {
+                return el.id === id
+            })
+            this.selectedPrject = mainProjects[selectedId]
+        },
+        hideDetail() {
+            this.onDetail = false
+        }
     }
 }
 </script>
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.2s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+
 .more-btn:hover .plus-icon {
     transform: rotate(90deg);
 }
@@ -333,6 +173,10 @@ export default {
     background: rgba(0, 0, 0, 0.7);
 } */
 .image__grid .image-box:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.image__grid .image-box:nth-child(8) {
     grid-column: span 2;
     grid-row: span 2;
 }

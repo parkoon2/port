@@ -14,24 +14,35 @@
                 <p>{{subtitle}}</p>
             </div>
             <div class="work-actions">
-                <app-button
-                    class="work-action"
+                <div class="action__button" icon="mdi-magnify-plus-outline" @click="showDetail()">
+                    <v-icon>mdi-dots-horizontal</v-icon>
+                </div>
+                <div
+                    class="action__button"
                     icon="mdi-magnify-plus-outline"
-                    :color="primary"
-                    :onClick="() => { openDetail(id) }"
-                ></app-button>
-                <app-button
-                    class="work-action second"
+                    @click="openWindow(git)"
+                >
+                    <v-icon>mdi-github-circle</v-icon>
+                </div>
+                <div
+                    class="action__button"
+                    icon="mdi-magnify-plus-outline"
+                    @click="openWindow(demo)"
+                >
+                    <v-icon>mdi-eye-check-outline</v-icon>
+                </div>
+                <!-- <app-button
+                    class="action__button second"
                     icon="mdi-github-circle"
                     :color="primary"
                     :onClick="() => { openWindow(git) }"
                 ></app-button>
                 <app-button
-                    class="work-action third"
+                    class="action__button third"
                     icon="mdi-eye-outline"
                     :color="primary"
                     :onClick="() => { openWindow(demo) }"
-                ></app-button>
+                ></app-button>-->
             </div>
         </div>
     </div>
@@ -57,8 +68,8 @@ export default {
         openWindow(url) {
             openNewWindow(url)
         },
-        openDetail(id) {
-            alert(id)
+        showDetail(id) {
+            this.$emit('showDetail')
         }
     }
 }
@@ -109,12 +120,59 @@ export default {
     display: flex;
 }
 
-.work-action {
-    /* transform: translateY(32px); */
+.action__button {
+    position: relative;
     visibility: hidden;
     opacity: 0;
-    transition: 0.01s;
+    transition: 0.2s;
     margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid var(--primary);
+    cursor: pointer;
+}
+/* .action__button .button__tooltip {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    text-align: center;
+    width: 62px;
+    font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--font-grey-1);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+} */
+
+.action__button:hover {
+    background: var(--primary);
+}
+
+/* .action__button:hover .button__tooltip {
+    opacity: 1;
+    visibility: visible;
+    bottom: -32px;
+}
+
+.action__button:hover .button__tooltip::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 30%;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.8);
+} */
+
+.action__button:hover i {
+    color: var(--font-grey-1);
+}
+
+.action__button i {
+    color: var(--primary);
 }
 
 .work-titles {
@@ -130,14 +188,14 @@ export default {
     transform: translateY(0);
 }
 
-.work-box:hover .work-action.second {
+.work-box:hover .action__button.second {
     transition-delay: 0.1s;
 }
-.work-box:hover .work-action.third {
+.work-box:hover .action__button.third {
     transition-delay: 0.2s;
 }
 
-.work-box:hover .work-action {
+.work-box:hover .action__button {
     visibility: visible;
 
     opacity: 1;
