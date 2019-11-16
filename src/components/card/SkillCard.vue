@@ -5,7 +5,7 @@
 
         <section-divider></section-divider>
 
-        <v-card data-aos="fade-right">
+        <v-card data-aos="fade-right" id="skill-data">
             <div class="skill-container">
                 <div
                     class="skill-inner"
@@ -13,11 +13,11 @@
                     :key="skill.name"
                 >
                     <h2 class="skill-title">{{ skill.name }}</h2>
-                    <v-progress-linear
-                        :value="skill.level"
-                        height="17"
+                    <skill-bar
+                        :level="skill.level"
                         :color="primary"
-                    ></v-progress-linear>
+                    ></skill-bar>
+
                     <div class="skill-level">{{ skill.level }}%</div>
                 </div>
             </div>
@@ -28,12 +28,14 @@
 <script>
 import PageTitle from '@/components/PageTitle'
 import SectionDivider from '@/components/shared/SectionDivider'
+import SkillBar from '@/components/SkillBar'
 import { skills } from '../../data'
 export default {
     name: 'skill-card',
     components: {
         PageTitle,
-        SectionDivider
+        SectionDivider,
+        SkillBar
     },
     computed: {
         primary() {
