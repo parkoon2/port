@@ -1,6 +1,6 @@
 <template>
-    <div class="side-project" id="side-project">
-        <page-title title="SIDE PROEJCT"></page-title>
+    <div class="side-project" id="side-projects">
+        <page-title title="SIDE PROEJCTS"></page-title>
 
         <section-divider></section-divider>
         <side-project></side-project>

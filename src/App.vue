@@ -64,6 +64,5 @@ export default {
     justify-content: center;
     align-items: center;
     padding-top: 200px !important;
-    padding-bottom: 200px !important;
 }
 </style>

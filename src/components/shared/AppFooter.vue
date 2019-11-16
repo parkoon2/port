@@ -15,7 +15,7 @@
             <span>©2019</span>
         </div>
 
-        <div class="footer__btn--top">
+        <div class="footer__btn--top" @click="top">
             <v-icon :color="grey">mdi-arrow-up</v-icon>
         </div>
     </div>
@@ -37,6 +37,15 @@ export default {
     },
     data() {
         return {}
+    },
+    methods: {
+        top() {
+            window.scrollTo({
+                behavior: 'smooth',
+                top: 0,
+                left: 0
+            })
+        }
     }
 }
 </script>

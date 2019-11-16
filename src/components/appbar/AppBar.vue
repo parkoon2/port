@@ -3,7 +3,9 @@
         <div class="app-bar" ref="appbar">
             <v-app-bar :color="setAppbarHeader" dark :flat="this.isScrollTop">
                 <v-toolbar-title class="logo">
-                    <span :style="{color: primary, fontWeight: 'bold'}">P</span>ARKOON
+                    <span :style="{ color: primary, fontWeight: 'bold' }"
+                        >P</span
+                    >ARKOON
                 </v-toolbar-title>
 
                 <v-spacer></v-spacer>
@@ -26,16 +28,20 @@
                             class="menu-btn"
                             active-class="active"
                             @click.stop="scrollTo(item)"
-                        >{{item.title}}</a>
+                            >{{ item.title }}</a
+                        >
                     </div>
                 </div>
             </v-app-bar>
         </div>
-        <app-drawer :show="isDrawerShow" :items="items" @scrollTo="scrollTo" @close="toggleDrawer"></app-drawer>
+        <app-drawer
+            :show="isDrawerShow"
+            :items="items"
+            @scrollTo="scrollTo"
+            @close="toggleDrawer"
+        ></app-drawer>
     </div>
 </template>
-
-
 
 <script>
 import AppDrawer from './AppDrawer'
@@ -72,15 +78,23 @@ export default {
             items: [
                 {
                     title: 'about',
-                    to: '/about'
+                    to: 'about'
                 },
                 {
                     title: 'skills',
-                    to: '/skills'
+                    to: 'skills'
                 },
                 {
                     title: 'works',
-                    to: '/works'
+                    to: 'works'
+                },
+                {
+                    title: 'interest',
+                    to: 'interest'
+                },
+                {
+                    title: 'side projects',
+                    to: 'side-projects'
                 }
             ]
         }
@@ -97,9 +111,9 @@ export default {
             })
         },
         scrollTo(item) {
-            const element = document.getElementById(item.title)
+            const element = document.getElementById(item.to)
 
-            if (item.title === 'about') {
+            if (item.to === 'about') {
                 return window.scrollTo({
                     behavior: 'smooth',
                     top: 0,
@@ -113,6 +127,7 @@ export default {
             )
             window.scrollTo({
                 behavior: 'smooth',
+                // top: element.offsetTop + marginTop,
                 top: element.offsetTop + marginTop,
                 left: 0
             })
