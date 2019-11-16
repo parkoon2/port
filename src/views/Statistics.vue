@@ -10,6 +10,9 @@
                 icon="mdi-baby-carriage"
                 title="AGE"
                 subtitle="day from the born"
+                data-aos="fade-up"
+                data-aos-easing="ease-in-sine"
+                data-aos-once="false"
             ></statistic-card>
 
             <template v-if="isCountingRepoDone">
@@ -18,6 +21,8 @@
                     icon="mdi-floppy"
                     title="GIT REPO"
                     subtitle="total count of repository"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
                 ></statistic-card>
             </template>
             <statistic-card
@@ -25,6 +30,10 @@
                 icon="mdi-briefcase"
                 title="PROJECTS"
                 :subtitle="projectFromNow"
+                data-aos-easing="ease-in-sine"
+                data-aos="fade-up"
+                data-aos-once="false"
+                data-aos-delay="200"
             ></statistic-card>
 
             <statistic-card
@@ -32,6 +41,10 @@
                 icon="mdi-account-badge-horizontal-outline"
                 title="CAREER"
                 subtitle="keep working"
+                data-aos-easing="ease-in-sine"
+                data-aos="fade-up"
+                data-aos-once="false"
+                data-aos-delay="300"
             ></statistic-card>
         </div>
     </div>

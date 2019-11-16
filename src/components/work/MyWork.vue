@@ -34,6 +34,8 @@
                 class="image-box"
                 v-for="project in projects"
                 :key="project.id"
+                data-aos="flip-up"
+                :data-aos-delay="project.delay"
             >
                 <work-image
                     :src="project.images[0]"

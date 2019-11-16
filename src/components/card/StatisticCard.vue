@@ -1,12 +1,12 @@
 <template>
     <div class="statistic__card" ref="statistic-card">
         <div class="statistic__info">
-            <div class="info__number" ref="number">{{data}}</div>
+            <div class="info__number" ref="number">{{ data }}</div>
             <div class="info__title">
-                <v-icon>{{icon}}</v-icon>
-                {{title}}
+                <v-icon>{{ icon }}</v-icon>
+                {{ title }}
             </div>
-            <div class="info__subtitle">{{subtitle}}</div>
+            <div class="info__subtitle">{{ subtitle }}</div>
         </div>
     </div>
 </template>

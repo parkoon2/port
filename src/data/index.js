@@ -41,7 +41,8 @@ export const sideProjects = [
         subtitle: 'feat, nomard corder',
         demo: 'https://parkoon.github.io/css-real-world',
         git: 'https://github.com/parkoon/css-real-world',
-        image: require('../assets/projects/css-real-world.jpg')
+        image: require('../assets/projects/css-real-world.jpg'),
+        delay: 0
     },
     {
         id: 2,
@@ -49,7 +50,8 @@ export const sideProjects = [
         subtitle: 'React & Context API',
         demo: 'https://parkoon.github.io/cc-nexon',
         git: 'https://github.com/parkoon/cc-nexon',
-        image: require('../assets/projects/clone-megabox.jpg')
+        image: require('../assets/projects/clone-megabox.jpg'),
+        delay: 200
     },
     {
         id: 3,
@@ -57,7 +59,8 @@ export const sideProjects = [
         subtitle: 'React & Next',
         demo: '',
         git: 'https://github.com/parkoon/window95',
-        image: require('../assets/projects/window95.jpg')
+        image: require('../assets/projects/window95.jpg'),
+        delay: 400
     }
 ]
 

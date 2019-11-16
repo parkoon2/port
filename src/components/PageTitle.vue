@@ -1,7 +1,9 @@
 <template>
     <div class="page__title">
-        <h1 v-if="title">{{ title }}</h1>
-        <p v-if="subtitle">{{subtitle }}</p>
+        <h1 v-if="title" data-aos="fade-left">
+            {{ title }}
+        </h1>
+        <p v-if="subtitle">{{ subtitle }}</p>
     </div>
 </template>
 <script>

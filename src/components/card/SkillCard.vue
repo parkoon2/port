@@ -4,12 +4,21 @@
         <page-title title="PROFESIONAL SKILLS"></page-title>
 
         <section-divider></section-divider>
-        <v-card>
+
+        <v-card data-aos="fade-right">
             <div class="skill-container">
-                <div class="skill-inner" v-for="skill in skills" :key="skill.name">
-                    <h2 class="skill-title">{{skill.name}}</h2>
-                    <v-progress-linear :value="skill.level" height="17" :color="primary"></v-progress-linear>
-                    <div class="skill-level">{{skill.level}}%</div>
+                <div
+                    class="skill-inner"
+                    v-for="skill in skills"
+                    :key="skill.name"
+                >
+                    <h2 class="skill-title">{{ skill.name }}</h2>
+                    <v-progress-linear
+                        :value="skill.level"
+                        height="17"
+                        :color="primary"
+                    ></v-progress-linear>
+                    <div class="skill-level">{{ skill.level }}%</div>
                 </div>
             </div>
         </v-card>
@@ -69,4 +78,3 @@ export default {
     }
 }
 </style>
-    

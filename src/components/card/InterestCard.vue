@@ -1,5 +1,5 @@
 <template>
-    <div class="interest__card">
+    <div class="interest__card" data-aos="fade-right">
         <div class="interest__desctiption">
             <vue-typer
                 :pre-type-delay="70"
@@ -11,27 +11,27 @@
         </div>
 
         <div class="interest__items">
-            <div class="item__icon">
+            <div class="item__icon" data-aos="fade-right" data-aos-delay="100">
                 <v-icon>mdi-tennis</v-icon>
                 <div class="icon__desc">TENNIS</div>
             </div>
-            <div class="item__icon">
+            <div class="item__icon" data-aos="fade-right" data-aos-delay="150">
                 <v-icon>mdi-language-css3</v-icon>
                 <div class="icon__desc">HTML5</div>
             </div>
-            <div class="item__icon">
+            <div class="item__icon" data-aos="fade-right" data-aos-delay="200">
                 <v-icon>mdi-language-html5</v-icon>
                 <div class="icon__desc">CSS</div>
             </div>
-            <div class="item__icon">
+            <div class="item__icon" data-aos="fade-right" data-aos-delay="250">
                 <v-icon>mdi-nodejs</v-icon>
                 <div class="icon__desc">NODE</div>
             </div>
-            <div class="item__icon">
+            <div class="item__icon" data-aos="fade-right" data-aos-delay="300">
                 <v-icon>mdi-vuejs</v-icon>
                 <div class="icon__desc">VUE</div>
             </div>
-            <div class="item__icon">
+            <div class="item__icon" data-aos="fade-right" data-aos-delay="350">
                 <v-icon>mdi-react</v-icon>
                 <div class="icon__desc">REACT</div>
             </div>

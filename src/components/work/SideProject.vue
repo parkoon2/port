@@ -1,24 +1,36 @@
 <template>
     <div class="side-project__wrapper">
         <div class="owl-carousel owl-theme">
-            <div class="side-project__item" v-for="p in sideProjects" :key="p.title">
+            <div
+                data-aos="flip-up"
+                class="side-project__item"
+                v-for="p in sideProjects"
+                :data-aos-delay="p.delay"
+                :key="p.title"
+            >
                 <img :src="p.image" />
 
                 <div class="item__info">
                     <div class="title__group">
-                        <h1 class="info__title">{{p.title}}</h1>
-                        <div class="info__subtitle">{{p.subtitle}}</div>
+                        <h1 class="info__title">{{ p.title }}</h1>
+                        <div class="info__subtitle">{{ p.subtitle }}</div>
                     </div>
 
                     <div class="info__btns">
                         <!-- <div class="info__btn info__btn--more">
                             <v-icon>mdi-dots-horizontal</v-icon>
                         </div>-->
-                        <div class="info__btn info__btn--github" @click="linkTo(p.git)">
+                        <div
+                            class="info__btn info__btn--github"
+                            @click="linkTo(p.git)"
+                        >
                             <!-- <v-icon>mdi-github-circle</v-icon> -->
                             SOURCE
                         </div>
-                        <div class="info__btn info__btn--demo" @click="linkTo(p.demo)">
+                        <div
+                            class="info__btn info__btn--demo"
+                            @click="linkTo(p.demo)"
+                        >
                             <!-- <v-icon>mdi-eye</v-icon> -->
                             DEMO
                         </div>
