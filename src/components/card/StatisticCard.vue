@@ -14,22 +14,28 @@
 <script>
 import { CountUp } from 'countup.js'
 
+let counted = false
 export default {
     name: 'statistic-card',
     props: ['data', 'title', 'subtitle', 'icon'],
 
     mounted() {
-        var countUp = new CountUp(this.$refs.number, this.data)
-        countUp.start()
-
-        window.addEventListener('scroll', () => {
-            if (
-                this.$refs['statistic-card'].offsetTop <=
-                window.scrollY + window.innerHeight - 76
-            ) {
-                console.log('dz')
-            }
-        })
+        // var countUp = new CountUp(this.$refs.number, this.data)
+        // counted = false
+        // window.addEventListener('scroll', () => {
+        //     if (!this.$refs['statistic-card']) return
+        //     const elHeight = document.getElementById('statistics').clientHeight
+        //     if (
+        //         this.$refs['statistic-card'].offsetTop <=
+        //         window.scrollY + window.innerHeight - elHeight
+        //     ) {
+        //         countUp.start()
+        //         if (!counted) {
+        //             counted = true
+        //             console.log('dz')
+        //         }
+        //     }
+        // })
     }
 }
 </script>

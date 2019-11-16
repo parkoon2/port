@@ -11,8 +11,6 @@
                 title="AGE"
                 subtitle="day from the born"
                 data-aos="fade-up"
-                data-aos-easing="ease-in-sine"
-                data-aos-once="false"
             ></statistic-card>
 
             <template v-if="isCountingRepoDone">
@@ -30,9 +28,7 @@
                 icon="mdi-briefcase"
                 title="PROJECTS"
                 :subtitle="projectFromNow"
-                data-aos-easing="ease-in-sine"
                 data-aos="fade-up"
-                data-aos-once="false"
                 data-aos-delay="200"
             ></statistic-card>
 
@@ -41,9 +37,7 @@
                 icon="mdi-account-badge-horizontal-outline"
                 title="CAREER"
                 subtitle="keep working"
-                data-aos-easing="ease-in-sine"
                 data-aos="fade-up"
-                data-aos-once="false"
                 data-aos-delay="300"
             ></statistic-card>
         </div>
