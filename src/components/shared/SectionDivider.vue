@@ -21,7 +21,7 @@
 }
 .devider__wrapper .divider {
     width: 32px;
-    height: 1px;
+    height: 2px;
     background: var(--font-grey-3);
     /* margin: 72px 0; */
 }
