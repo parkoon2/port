@@ -7,15 +7,20 @@
 
             <about-page></about-page>
             <white-space></white-space>
-            <side-project-page></side-project-page>
-            <white-space></white-space>
+
             <skill-page></skill-page>
             <white-space></white-space>
+
             <interest-page></interest-page>
             <white-space></white-space>
+
             <statistics-page></statistics-page>
             <white-space></white-space>
+
             <work-page></work-page>
+            <white-space></white-space>
+
+            <side-project-page></side-project-page>
             <white-space></white-space>
             <!-- <contact-page></contact-page> -->
         </v-content>

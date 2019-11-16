@@ -11,7 +11,7 @@
         <v-row>
             <v-col>
                 <!-- subtitle="From Web Components and UI/UX animations to React.JS, Redux, Vue.JS, and Node.JS. Check out my latest web software development portfolio projects." -->
-                <page-title title="PORTFOLIO"></page-title>
+                <page-title title="WORKS"></page-title>
 
                 <section-divider></section-divider>
             </v-col>
