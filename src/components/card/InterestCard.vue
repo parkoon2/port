@@ -61,7 +61,7 @@ export default {}
     color: var(--font-grey-1);
     text-align: center;
     margin-bottom: 32px;
-    height: 80px;
+    height: 50%;
 }
 
 .interest__card .interest__items {

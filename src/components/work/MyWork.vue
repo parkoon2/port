@@ -165,15 +165,6 @@ export default {
     background: rgba(0, 0, 0, 0.3);
 }
 
-/* .image__grid .image-box:hover .work-image::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    background: rgba(0, 0, 0, 0.7);
-} */
 .image__grid .image-box:first-child {
     grid-column: span 2;
     grid-row: span 2;
@@ -189,8 +180,12 @@ export default {
     }
 
     .image__grid .image-box:first-child {
-        grid-column: 1;
-        grid-row: 1;
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .image__grid .image-box:nth-child(8) {
+        grid-column: span 1;
+        grid-row: span 1;
     }
 }
 
@@ -200,11 +195,6 @@ export default {
         grid-row-gap: 12px;
         grid-template-rows: 320px;
         grid-auto-rows: 320px;
-    }
-
-    .image__grid .image-box:first-child {
-        grid-column: 1;
-        grid-row: 1;
     }
 
     .tag__title {
