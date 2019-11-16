@@ -25,8 +25,10 @@
                             :key="i"
                             text
                             :to="item.to"
-                            class="menu-btn"
-                            active-class="active"
+                            :class="[
+                                'menu__btn',
+                                currentView === item.to ? `active` : ``
+                            ]"
                             @click.stop="scrollTo(item)"
                             >{{ item.title }}</a
                         >
@@ -75,6 +77,7 @@ export default {
         return {
             isScrollTop: true,
             isDrawerShow: false,
+            currentView: 'about',
             items: [
                 {
                     title: 'about',
@@ -85,13 +88,18 @@ export default {
                     to: 'skills'
                 },
                 {
-                    title: 'works',
-                    to: 'works'
-                },
-                {
                     title: 'interest',
                     to: 'interest'
                 },
+                {
+                    title: 'statistics',
+                    to: 'statistics'
+                },
+                {
+                    title: 'works',
+                    to: 'works'
+                },
+
                 {
                     title: 'side projects',
                     to: 'side-projects'
@@ -127,8 +135,8 @@ export default {
             )
             window.scrollTo({
                 behavior: 'smooth',
-                // top: element.offsetTop + marginTop,
                 top: element.offsetTop + marginTop,
+                // top: element.offsetTop,
                 left: 0
             })
 
@@ -150,6 +158,19 @@ export default {
             } else {
                 this.isScrollTop = true
             }
+
+            this.items.forEach(item => {
+                const el = document.getElementById(item.to)
+                const offset = el.offsetTop
+                if (
+                    offset <= Math.floor(window.scrollY) &&
+                    offset + el.clientHeight >= Math.floor(window.scrollY)
+                ) {
+                    if (this.currentView !== item.to) {
+                        this.currentView = item.to
+                    }
+                }
+            })
         })
     }
 }
@@ -171,7 +192,7 @@ export default {
 .menu-box.mobile {
     display: none;
 }
-.menu-btn {
+.menu__btn {
     color: var(--font-grey-3);
     text-transform: uppercase;
     text-decoration-line: none;
@@ -181,36 +202,32 @@ export default {
     font-size: 15px;
     transition: 0.2s linear;
 }
+.menu__btn.active {
+    color: var(--primary);
+}
 
-.menu-btn:last-child {
+.menu__btn:last-child {
     margin-right: 12px;
 }
 
-/* .menu-btn::before {
+.menu__btn::before {
     content: '';
-    width: 0;
-    height: 3px;
+    width: 3px;
+    height: 0;
     background-color: var(--primary);
     position: absolute;
-    bottom: -7px;
-    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -10px;
     border-radius: 7px;
     transition: 0.3s;
 }
 
-.menu-btn.active::before {
-    content: '';
-    width: 100%;
-    height: 3px;
-    background-color: var(--primary);
-    position: absolute;
-    bottom: -7px;
-    left: 0;
-    border-radius: 7px;
-    transition: 0.3s;
-} */
+.menu__btn.active::before {
+    height: 80%;
+}
 
-.menu-btn:hover {
+.menu__btn:hover {
     color: var(--primary);
 }
 @media screen and (max-width: 960px) {
