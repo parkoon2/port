@@ -7,16 +7,9 @@
 
         <v-card data-aos="fade-right" id="skill-data">
             <div class="skill-container">
-                <div
-                    class="skill-inner"
-                    v-for="skill in skills"
-                    :key="skill.name"
-                >
+                <div class="skill-inner" v-for="skill in skills" :key="skill.name">
                     <h2 class="skill-title">{{ skill.name }}</h2>
-                    <skill-bar
-                        :level="skill.level"
-                        :color="primary"
-                    ></skill-bar>
+                    <skill-bar :level="skill.level" :color="primary"></skill-bar>
 
                     <div class="skill-level">{{ skill.level }}%</div>
                 </div>
@@ -77,6 +70,11 @@ export default {
 @media screen and (max-width: 960px) {
     .skill-inner {
         width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .skill-container {
+        padding: 0px;
     }
 }
 </style>
