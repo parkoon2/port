@@ -8,21 +8,24 @@
             </div>
             <div class="work-actions">
                 <div class="action__button" icon="mdi-magnify-plus-outline" @click="showDetail()">
-                    <v-icon>mdi-dots-horizontal</v-icon>
+                    MORE
+                    <!-- <v-icon>mdi-dots-horizontal</v-icon> -->
                 </div>
                 <div
                     class="action__button"
                     icon="mdi-magnify-plus-outline"
                     @click="openWindow(git)"
                 >
-                    <v-icon>mdi-github-circle</v-icon>
+                    SOURCE
+                    <!-- <v-icon>mdi-github-circle</v-icon> -->
                 </div>
                 <div
                     class="action__button"
                     icon="mdi-magnify-plus-outline"
                     @click="openWindow(demo)"
                 >
-                    <v-icon>mdi-eye-check-outline</v-icon>
+                    DEMO
+                    <!-- <v-icon>mdi-eye-check-outline</v-icon> -->
                 </div>
                 <!-- <app-button
                     class="action__button second"
@@ -116,10 +119,13 @@ export default {
     padding: 12px;
     border: 1px solid var(--primary);
     cursor: pointer;
+    color: var(--primary);
+    /* font-weight: bold; */
 }
 
 .action__button:hover {
     background: var(--primary);
+    color: var(--font-white);
 }
 
 .action__button:hover i {
