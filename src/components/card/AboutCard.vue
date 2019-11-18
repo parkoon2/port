@@ -2,7 +2,25 @@
     <div class="about__card">
         <div class="about__photo" data-aos="fade-right">
             <div class="about__photo--image"></div>
-            <p class="about__photo--title" v-html="profile.title"></p>
+
+            <!-- <p class="about__photo--title" v-html="profile.title"></p> -->
+            <div class="about__photo--title">
+                I'm
+                <span class="about__title--first">P</span>
+                <rubber-band-text text="a" size="37"></rubber-band-text>
+                <rubber-band-text text="r" size="37"></rubber-band-text>
+                <rubber-band-text text="k" size="37" mr="10"></rubber-band-text>
+                <rubber-band-text text="J" size="37"></rubber-band-text>
+                <rubber-band-text text="o" size="37"></rubber-band-text>
+                <rubber-band-text text="n" size="37"></rubber-band-text>
+                <rubber-band-text text="g" size="37" mr="10"></rubber-band-text>
+                <rubber-band-text text="H" size="37"></rubber-band-text>
+                <rubber-band-text text="y" size="37"></rubber-band-text>
+                <rubber-band-text text="e" size="37"></rubber-band-text>
+                <rubber-band-text text="o" size="37"></rubber-band-text>
+                <rubber-band-text text="k" size="37"></rubber-band-text>
+            </div>
+
             <p class="about__photo--subtitle">{{ profile.subtitle }}</p>
             <hr />
 
@@ -10,10 +28,7 @@
                 <ul class="photo__desc---list">
                     <li v-for="profile in profileToArray" :key="profile.title">
                         <div class="list-title">{{ profile.title }}</div>
-                        <div
-                            v-if="Array.isArray(profile.value)"
-                            class="list__grid"
-                        >
+                        <div v-if="Array.isArray(profile.value)" class="list__grid">
                             <v-chip
                                 label
                                 outlined
@@ -21,12 +36,13 @@
                                 v-for="(v, index) in profile.value"
                                 :key="index"
                                 class="list-value"
-                                >{{ v }}</v-chip
-                            >
+                            >{{ v }}</v-chip>
                         </div>
-                        <span v-else class="list-value">{{
+                        <span v-else class="list-value">
+                            {{
                             profile.value
-                        }}</span>
+                            }}
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -35,11 +51,7 @@
                 <social-link color="black"></social-link>
             </div>
         </div>
-        <div
-            class="about__info"
-            data-aos="fade-left"
-            data-aos-easing="ease-in-sine"
-        >
+        <div class="about__info" data-aos="fade-left" data-aos-easing="ease-in-sine">
             <h1 class="info__title">ABOUT ME</h1>
 
             <div class="info__categories">
@@ -49,17 +61,15 @@
                     </div>-->
                     <div class="item__desc">
                         <h3 class="desc__title">Trendy</h3>
-                        <h4 class="desc__subtitle">
-                            frontend library & framework
-                        </h4>
+                        <h4 class="desc__subtitle">frontend library & framework</h4>
                         <div class="desc__body">
                             <div class="desc__body--summary">
                                 트렌드에 뒤쳐지지 않는 개발자기 되기 위해
                                 노력하고 있습니다.
-                            </div>
-                            최근에는 React, Vue와 같이 화면단을 구성하는
+                            </div>최근에는 React, Vue와 같이 화면단을 구성하는
                             프레임워크에 관심이 있어 다양한 레퍼런스를 통해
-                            공부중에 있습니다. <br />React는 Next와 함께
+                            공부중에 있습니다.
+                            <br />React는 Next와 함께
                             실무에서 사용해본 적 있으며, Vue는 사이드 프로젝트를
                             통해 실무에 바로 적용할 수 있는 수준까지
                             키워놨습니다.
@@ -69,15 +79,12 @@
                 <div class="category__item">
                     <div class="item__desc">
                         <h3 class="desc__title">Career</h3>
-                        <h4 class="desc__subtitle">
-                            life is like a role playing game
-                        </h4>
+                        <h4 class="desc__subtitle">life is like a role playing game</h4>
                         <div class="desc__body">
                             <div class="desc__body--summary">
                                 어떻게 하면 남들보다 앞서 나갈 수 있을까
                                 고민하며 살고 있습니다.
-                            </div>
-                            보다 나은 개발 실력를 위해 버스와 지하철에서 자투리
+                            </div>보다 나은 개발 실력를 위해 버스와 지하철에서 자투리
                             시간을 내어 개발 youtube 채널, inflean, udemy
                             시청을, 스트레스 해소와 건강을 위해 퇴근 후에는
                             헬스, 테니스와 같은 운동을 하고 있습니다.
@@ -87,14 +94,9 @@
                 <div class="category__item">
                     <div class="item__desc">
                         <h3 class="desc__title">Shortcomings</h3>
-                        <h4 class="desc__subtitle">
-                            remedy one's shortcomings
-                        </h4>
+                        <h4 class="desc__subtitle">remedy one's shortcomings</h4>
                         <div class="desc__body">
-                            <div class="desc__body--summary">
-                                단점을 보완하기 위해 노력하고 있습니다.
-                            </div>
-                            이 전 회사에서 3년동안 script를 위주로 개발해
+                            <div class="desc__body--summary">단점을 보완하기 위해 노력하고 있습니다.</div>이 전 회사에서 3년동안 script를 위주로 개발해
                             왔습니다. node로 백엔드를 구성하고, javascript로
                             퍼블리싱 받은 화면을 구성했습니다. 퍼블리셔 없이
                             혼자 웹페이지를 구성하는데 한계가 있었습니다. HTML과
@@ -113,8 +115,7 @@
                             <div class="desc__body--summary">
                                 이상적인 개발자는 우아하고 효울적인 코드를
                                 작성하는 사람이라 생각합니다.
-                            </div>
-                            우아하고 아름다운 코드를 작성하는 개발자가 되기
+                            </div>우아하고 아름다운 코드를 작성하는 개발자가 되기
                             위해, 아래 내용들을 항상 숙지하며 개발하고 있습니다.
                             <ol>
                                 <li>한 가지를 잘 하는 코드를 작성하자</li>
@@ -131,12 +132,13 @@
 <script>
 import SocialLink from '@/components/shared/SocialLink'
 import SectionDivider from '@/components/shared/SectionDivider'
-
+import RubberBandText from '@/components/RubberBandText'
 import { profile } from '../../data'
 export default {
     components: {
         SocialLink,
-        SectionDivider
+        SectionDivider,
+        RubberBandText
     },
     computed: {
         cardBg() {
@@ -229,9 +231,25 @@ export default {
     margin: 0;
 }
 
-.about__card .about__photo .about__photo--title >>> span {
+.about__card .about__photo .about__photo--title .about__title--first {
+    position: relative;
     font-weight: bold;
+    font-size: 3rem;
+    color: #000;
+    -webkit-text-stroke: 1px #000;
+
+    /* color: var(--primary); */
+}
+
+.about__card .about__photo .about__photo--title .about__title--first::before {
+    position: absolute;
+    content: 'P';
+    top: 0;
+    left: 0;
     color: var(--primary);
+    z-index: 1;
+    transform: translate(3px, -11px);
+    -webkit-text-stroke: 0px;
 }
 
 .about__card .about__photo .about__photo--preword {
@@ -420,6 +438,9 @@ export default {
     }
 }
 @media screen and (max-width: 600px) {
+    .about__info {
+        padding: 7px;
+    }
     .about__card .about__photo .about__photo--title {
         font-size: 27px;
     }
