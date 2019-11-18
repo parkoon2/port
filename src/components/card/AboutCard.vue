@@ -63,65 +63,69 @@
                         <h3 class="desc__title">Trendy</h3>
                         <h4 class="desc__subtitle">frontend library & framework</h4>
                         <div class="desc__body">
-                            <div class="desc__body--summary">
-                                트렌드에 뒤쳐지지 않는 개발자기 되기 위해
-                                노력하고 있습니다.
-                            </div>최근에는 React, Vue와 같이 화면단을 구성하는
-                            프레임워크에 관심이 있어 다양한 레퍼런스를 통해
-                            공부중에 있습니다.
-                            <br />React는 Next와 함께
-                            실무에서 사용해본 적 있으며, Vue는 사이드 프로젝트를
-                            통해 실무에 바로 적용할 수 있는 수준까지
-                            키워놨습니다.
+                            <div class="desc__body--summary">트렌트에 뒤처지지 않는 개발자가 되기 위해 노력하고 있습니다.</div>
+                            <p>
+                                최근에는 React, Vue와 같이 프론트엔드 프레임워크에 관심을 두고 다양한 강의 및 사이드 프로젝트를 통해 학습하고 있습니다.
+                                React는 다수의 관리자 페이지, KT 프로젝트, LG 프로젝트 등 실무에서 사용했었습니다. Vue는 다양한 강의와 사이드 프로젝트를 통해 실무에 바로 적용할 수 있는 수준까지 키워놨습니다.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="category__item">
                     <div class="item__desc">
-                        <h3 class="desc__title">Career</h3>
+                        <h3 class="desc__title">Professional</h3>
                         <h4 class="desc__subtitle">life is like a role playing game</h4>
                         <div class="desc__body">
-                            <div class="desc__body--summary">
-                                어떻게 하면 남들보다 앞서 나갈 수 있을까
-                                고민하며 살고 있습니다.
-                            </div>보다 나은 개발 실력를 위해 버스와 지하철에서 자투리
-                            시간을 내어 개발 youtube 채널, inflean, udemy
-                            시청을, 스트레스 해소와 건강을 위해 퇴근 후에는
-                            헬스, 테니스와 같은 운동을 하고 있습니다.
+                            <div class="desc__body--summary">어떻게 하면 남들보다 앞서 나갈 수 있을까 고민하며 살고 있습니다.</div>
+
+                            <p>
+                                보다 나은 개발실력을 위해 버스나 지하철에서 자투리 시간을 내어 다양한 강의를 통해 기술을 학습 및 복습을 하고 있습니다.
+                                피치 못할 야근에도 쓰러지지 않는 강인한 체력을 위해 퇴근 후에는 헬스 & 테니스를 병행하고 있습니다.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="category__item">
                     <div class="item__desc">
-                        <h3 class="desc__title">Shortcomings</h3>
-                        <h4 class="desc__subtitle">remedy one's shortcomings</h4>
+                        <h3 class="desc__title">Fundamental</h3>
+                        <h4 class="desc__subtitle">for a fundamental skills</h4>
                         <div class="desc__body">
-                            <div class="desc__body--summary">단점을 보완하기 위해 노력하고 있습니다.</div>이 전 회사에서 3년동안 script를 위주로 개발해
-                            왔습니다. node로 백엔드를 구성하고, javascript로
-                            퍼블리싱 받은 화면을 구성했습니다. 퍼블리셔 없이
-                            혼자 웹페이지를 구성하는데 한계가 있었습니다. HTML과
-                            CSS를 읽고 이해할 수는 있었지만, 스스로 화면
-                            레이아웃을 구성하는데 어려움이 있었습니다. 이 점을
-                            극복하고자, 다양한 웹페이지를 따라서 코딩해보며
-                            퍼블리싱할 수 있는 능력을 키울 수 있었습니다.
+                            <div
+                                class="desc__body--summary"
+                            >빠르게 변하는 트렌드를 두려워하지 않기 위해 기본기에 충실히 하고 있습니다.</div>
+                            <p>
+                                새로운 기술은 잘 익혀서 유통기한 내에 잘 써먹고 잊으면 된다고 생각합니다. 그래야 트렌디한 웹 세상에서 스트레스 없이 잘 살아남을 수 있다고 생각합니다.
+                                그러기 위해 클라이언트 측면 라이브러리에 근간이 되는 HTML, CSS, Javascript를 항상 갈고 닦고 있습니다.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="category__item">
                     <div class="item__desc">
-                        <h3 class="desc__title">Ideal</h3>
-                        <h4 class="desc__subtitle">clean code</h4>
+                        <h3 class="desc__title">Clean Code</h3>
+                        <h4 class="desc__subtitle">no annotation yes naming</h4>
                         <div class="desc__body">
-                            <div class="desc__body--summary">
-                                이상적인 개발자는 우아하고 효울적인 코드를
-                                작성하는 사람이라 생각합니다.
-                            </div>우아하고 아름다운 코드를 작성하는 개발자가 되기
-                            위해, 아래 내용들을 항상 숙지하며 개발하고 있습니다.
-                            <ol>
-                                <li>한 가지를 잘 하는 코드를 작성하자</li>
-                                <li>가독성이 좋은 코드를 작성하자</li>
-                                <li>다른 사람이 고치기 쉬운 코드를 작성하자</li>
-                            </ol>
+                            <div
+                                class="desc__body--summary"
+                            >주석 없이도 다른 사람들이 이해할 수 있는 코드를 작성하려 노력하고 있습니다.</div>
+                            <p>
+                                현업에서 다양한 사람들과 업무를 하면서 코드를 작성한 본인만 이해할 수 있는 난해한 변수명 및 함수명, 100줄이 넘어버리는 함수 등을 보며 스트레스를 받은 적이 한두 번이 아니었습니다.
+                                다른 동료들에게 위와 같은 스트레스를 주지 않기 위해 네이밍, 리팩토링에 사용되는 시간을 아까워하지 않습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category__item">
+                    <div class="item__desc">
+                        <h3 class="desc__title">Productivity</h3>
+                        <h4 class="desc__subtitle">a high value on punctuality</h4>
+                        <div class="desc__body">
+                            <div class="desc__body--summary">생산성 있는 개발자가 되기 위해 노력하고 있습니다.</div>
+                            <p>
+                                스타트업에 근무하는 동안 안정적이고 완성도 높은 코드를 짜는 개발자도 중요하지만, 생산성 높은 개발자도 못지않게 중요하다는 것을 알았습니다.
+                                생산성을 높이기 위해 여유 시간에 코딩하는 것이 중요하다고 생각했기 때문에, 점심 식사 이후 남는 자투리 시간에도 코딩했습니다.
+                                그리고, 팀장으로 있는 동안 의미 없이 길어지는 회의를 피하고자, 집중력이 저하되는 점심시간 30분 전에 팀원들과 회의 시간을 가졌습니다.
+                            </p>
                         </div>
                     </div>
                 </div>
