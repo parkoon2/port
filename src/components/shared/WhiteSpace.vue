@@ -7,18 +7,18 @@ export default {}
 <style>
 .whitespace {
     width: 100%;
-    height: 200px;
+    height: 120px;
     background: var(--body-bg);
 }
 
 @media screen and (max-width: 960px) {
     .whitespace {
-        height: 100px;
+        height: 70px;
     }
 }
 @media screen and (max-width: 600px) {
     .whitespace {
-        height: 50px;
+        height: 0px;
     }
 }
 </style>
