@@ -2,10 +2,7 @@
     <div>
         <!-- <transition name="fade"> -->
         <div v-if="onDetail">
-            <work-detail
-                @hideDetail="hideDetail"
-                :item="selectedPrject"
-            ></work-detail>
+            <work-detail @hideDetail="hideDetail" :item="selectedPrject"></work-detail>
         </div>
         <!-- </transition> -->
         <v-row>
@@ -52,7 +49,7 @@
             <v-col class="more-btn-box">
                 <app-button icon="mdi-plus" :color="grey"></app-button>
             </v-col>
-        </v-row> -->
+        </v-row>-->
     </div>
 </template>
 <script>
@@ -145,25 +142,34 @@ export default {
 
 .image__grid {
     display: grid;
-    grid-gap: 12px;
+    grid-gap: 21px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 230px;
-    grid-auto-rows: 230px;
+    grid-template-rows: 270px;
+    grid-auto-rows: 270px;
 }
 
 .image__grid .image-box {
     position: relative;
 }
 
-.image__grid:hover .image-box:not(:hover):after {
+/* .image__grid .image-box:after {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     content: '';
-    background: rgba(0, 0, 0, 0.3);
-}
+    background: rgba(0, 0, 0, 0.5);
+} */
+/* .image__grid:hover .image-box:not(:hover):after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: rgba(0, 0, 0, 0.2);
+} */
 
 .image__grid .image-box:first-child {
     grid-column: span 2;

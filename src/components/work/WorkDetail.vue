@@ -14,10 +14,7 @@
                     </div>
                 </div>
 
-                <img
-                    :src="images[currentImageIndex]"
-                    :class="[fade ? 'fade-in' : 'fade-out']"
-                />
+                <img :src="images[currentImageIndex]" :class="[fade ? 'fade-in' : 'fade-out']" />
 
                 <div class="card__content">
                     <div class="content__header">
@@ -31,9 +28,7 @@
                         <div class="body__tech">
                             <h2 class="body__title dot">Technical sheet</h2>
                             <ul class="tech__list">
-                                <li v-for="tech in item.techs" :key="tech.id">
-                                    {{ tech }}
-                                </li>
+                                <li v-for="tech in item.techs" :key="tech.id">{{ tech }}</li>
                             </ul>
                         </div>
 
@@ -49,9 +44,7 @@
                         <div class="body__desc">
                             <h2 class="body__title">About this project</h2>
 
-                            <p>
-                                {{ item.description }}
-                            </p>
+                            <p>{{ item.description }}</p>
                         </div>
                     </div>
                 </div>
