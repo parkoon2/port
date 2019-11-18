@@ -127,6 +127,9 @@ export default {}
 }
 
 @media screen and (max-width: 600px) {
+    .interest__card {
+        padding: 24px 12px 24px 12px;
+    }
     .interest__card .interest__desctiption {
         width: 100%;
     }
