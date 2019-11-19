@@ -58,8 +58,8 @@ export default {
     },
     mounted() {
         $('.owl-carousel').owlCarousel({
-            // loop: true,
-            // autoplay: true,
+            loop: true,
+            autoplay: true,
             dots: true,
             nav: false,
             autoWidth: true,
