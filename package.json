@@ -13,6 +13,7 @@
     "countup.js": "^2.0.4",
     "moment": "^2.24.0",
     "owl.carousel": "^2.3.4",
+    "uuid": "^3.3.3",
     "vue": "^2.6.10",
     "vue-router": "^3.0.6",
     "vue-typer": "^1.2.0",

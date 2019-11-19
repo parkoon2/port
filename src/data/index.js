@@ -36,38 +36,57 @@ export const social = [
 // ------- 사이드 프로젝트 -------
 export const sideProjects = [
     {
-        id: 1,
+        id: v1(),
+        title: '2019 포트폴리오',
+        subtitle: 'updated at 2019',
+        demo: 'https://devparkoon.me',
+        git: 'https://github.com/parkoon/port',
+        image: require('../assets/projects/homepage/homepage-1.jpg'),
+        delay: 0
+    },
+    {
+        id: v1(),
+        title: '테트리스',
+        subtitle: 'React & React hook',
+        demo: 'https://devparkoon.me',
+        git: 'https://parkoon.github.io/react-tetris/',
+        image: require('../assets/projects/tetris/tetris-1.jpg'),
+        delay: 200
+    },
+    {
+        id: v1(),
         title: 'CSS Layout practice',
         subtitle: 'feat, nomard corder',
         demo: 'https://parkoon.github.io/css-real-world',
         git: 'https://github.com/parkoon/css-real-world',
         image: require('../assets/projects/css-real-world.jpg'),
-        delay: 0
+        delay: 400
     },
     {
-        id: 2,
+        id: v1(),
         title: 'Clone Coding (Megabox)',
         subtitle: 'React & Context API',
         demo: 'https://parkoon.github.io/cc-nexon',
         git: 'https://github.com/parkoon/cc-nexon',
         image: require('../assets/projects/clone-megabox.jpg'),
-        delay: 200
+        delay: 600
     },
     {
-        id: 3,
+        id: v1(),
         title: 'Window 95 style portfolio',
         subtitle: 'React & Next',
         demo: '',
         git: 'https://github.com/parkoon/window95',
         image: require('../assets/projects/window95.jpg'),
-        delay: 400
+        delay: 800
     }
 ]
 
 // ------- 메인 프로젝트 -------
+import { v1 } from 'uuid'
 export const mainProjects = [
     {
-        id: 1,
+        id: v1(),
         title: 'LG AI 매장 데모 앱',
         subtitle: 'LG OLED TV 매장 전시를 위한 앱',
         techs: ['HTML', 'CSS', 'Javascript', 'Enact', 'webOS'],
@@ -86,7 +105,24 @@ export const mainProjects = [
             'LG OLED TV AI ThinQ 홍보를 위한 매장 데모 어플리케이션 입니다. webOS에서 지원해주는 AI Sound / AI Picture / 조도 센서 기능 API 기반으로 개발되었습니다. 해당 앱을 통해 고객은 매장 현장에서 LG OLED TV AI ThinQ 만의 화질과 사운드를 느낄 수 있습니다.'
     },
     {
-        id: 2,
+        id: v1(),
+        title: 'LG A+ CES 데모 앱',
+        subtitle: '2019 미국 라스베가스 소비자 가전 전시회 데모 앱',
+        techs: ['HTML', 'CSS', 'Javascript', 'Enact', 'webOS'],
+        role: '개발 & 유지보수',
+        period: '2018.10.01 ~ 2018.12.01',
+        images: [
+            require('../assets/projects/lg-aplus/aplus-1.jpg'),
+            require('../assets/projects/lg-aplus/aplus-2.jpg')
+        ],
+        git: '',
+        demo:
+            'https://www.youtube.com/watch?v=bwNYuWizpmk&feature=youtu.be&t=415',
+        description:
+            '2019년 라스베가스에서 개최한 CES 중 한 파트인 LG Press conference에서 제품 소개를 위한 어플리케이션 입니다. webOS에서 지원해주는 Roll Controll API를 기반으로 개발되었습니다. 어플리케이션 설정에 따라 자동으로 TV / 메뉴 / 종료가 동작 될 수 있고, 발표자의 리모컨 조작으로 3가지 동작을 자유롭게 조작할 수 있습니다.'
+    },
+    {
+        id: v1(),
         title: 'LG Smart TV 전자 메뉴얼',
         subtitle: '사용자를 위한 TV 가이드 앱',
         techs: ['HTML', 'CSS', 'Javascript', 'jQuery', 'webOS'],
@@ -103,7 +139,7 @@ export const mainProjects = [
             'LG SmartTV 전자 메뉴얼은 직관적인 UI와 화면 구성을 통해 사용자 가독성 중심에 디자인과 웹표준 및 웹 접근성 기술을 적용하여 사용자 편의성에 최적화된 웹 기술 기반에 전자 메뉴얼입니다.'
     },
     {
-        id: 3,
+        id: v1(),
         title: 'Knowledgetalk',
         subtitle: 'WebRTC를 이용한 영상/음성 통화 웹',
         techs: [
@@ -134,7 +170,7 @@ export const mainProjects = [
             '웹기술인 HTML5와 WebRTC(Web Real-Time Communication)를 이용하여 웹브라우저에서 Flash 또는 Silverlight같은 플러그인 없이 웹 브라우저만으로 영상통화 및 데이터 전송이 가능한 웹 브라우저 기반의 메신저입니다.'
     },
     {
-        id: 4,
+        id: v1(),
         title: 'KP 토론서비스 관리 웹',
         subtitle: '관리자 페이지',
         techs: [
@@ -163,7 +199,7 @@ export const mainProjects = [
             'KP 토론서비스의 사용자, 토론방, 문의 게시판, 통계 등을 관리하는 페이지입니다.'
     },
     {
-        id: 5,
+        id: v1(),
         title: 'KT 호텔서비스 관리 웹',
         subtitle: '관리자 페이지',
         techs: [
@@ -191,7 +227,7 @@ export const mainProjects = [
     },
 
     {
-        id: 7,
+        id: v1(),
         title: 'Webrtc 커스텀 라이브러리',
         subtitle: '영상/음성 웹을 위한 라이브러리',
         techs: ['Javascript', 'WebRTC', 'socket.io', 'Webpack'],
@@ -205,7 +241,7 @@ export const mainProjects = [
     },
 
     {
-        id: 8,
+        id: v1(),
         title: '렌티큘러 측위 시스템',
         subtitle: '정부과제',
         techs: ['Javascript', 'Node.js', 'Express', 'REST api', 'PostgreSQL'],
@@ -227,7 +263,7 @@ export const mainProjects = [
             '무선 Wi-Fi 환경에서 대형 건물에 진입하게 되면 GPS 가 동작하지 않아 건물 내부에서는 사용자의 측위에 문제가 발생, 건물 내부에 렌티큘러 스티커를 부착하여, 해당 스티커를 통해 사용자의 정밀한 위치 정보를 제공하는 시스템입니다.'
     },
     {
-        id: 6,
+        id: v1(),
         title: 'KT 화상컨설팅 PC 앱',
         subtitle: 'WebRTC를 이용한 영상/음성 통화 PC 앱',
         techs: ['HTML', 'CSS', 'Javascript', 'Electron', 'Socket.io'],
@@ -246,7 +282,7 @@ export const mainProjects = [
             '웹기술인 HTML5와 WebRTC(Web Real-Time Communication) 그리고 Electron Framework를 이용하여 PC환경 에서 영상통화 및 데이터 전송이 가능한 메신저입니다.'
     },
     {
-        id: 9,
+        id: v1(),
         title: 'KT 화상컨설팅 웹',
         subtitle: 'WebRTC를 이용한 영상/음성 통화 웹',
         techs: [
@@ -276,7 +312,7 @@ export const mainProjects = [
             '웹기술인 HTML5와 WebRTC(Web Real-Time Communication)를 이용하여 웹브라우저에서 Flash 또는 Silverlight같은 플러그인 없이 웹 브라우저만으로 영상통화 및 데이터 전송이 가능한 웹 브라우저 기반의 메신저입니다.'
     },
     {
-        id: 10,
+        id: v1(),
         title: 'Knowledgetalk 관리 웹',
         subtitle: '관리자 페이지',
         techs: ['HTML', 'CSS', 'Javascript', 'React', 'Node.js', 'Express'],
