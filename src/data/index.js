@@ -48,8 +48,8 @@ export const sideProjects = [
         id: v1(),
         title: '테트리스',
         subtitle: 'React & React hook',
-        demo: 'https://devparkoon.me',
-        git: 'https://parkoon.github.io/react-tetris/',
+        demo: 'https://parkoon.github.io/react-tetris/',
+        git: 'https://github.com/parkoon/react-tetris',
         image: require('../assets/projects/tetris/tetris-1.jpg'),
         delay: 200
     },
