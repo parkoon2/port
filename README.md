@@ -22,6 +22,12 @@ npm i
 npm run serve
 ```
 
+## 배포 방법
+
+```sh
+git subtree push --prefix dist origin gh-pages
+```
+
 <!-- Markdown link & img dfn's -->
 
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
