@@ -146,9 +146,7 @@ export default {
             //     inline: 'start'
             // })
 
-            this.$nextTick(() => {
-                console.log(element)
-            })
+            this.$nextTick(() => {})
         }
     },
     mounted() {

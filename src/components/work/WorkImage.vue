@@ -3,42 +3,33 @@
         <img class="work-image" :src="src" />
         <div class="work-info">
             <div class="work-titles">
-                <h2>{{title}}</h2>
-                <p>{{subtitle}}</p>
+                <h2>{{ title }}</h2>
+                <p>{{ subtitle }}</p>
             </div>
             <div class="work-actions">
-                <div class="action__button" icon="mdi-magnify-plus-outline" @click="showDetail()">
+                <div
+                    class="action__button"
+                    icon="mdi-magnify-plus-outline"
+                    @click="showDetail()"
+                >
                     MORE
-                    <!-- <v-icon>mdi-dots-horizontal</v-icon> -->
                 </div>
                 <div
+                    v-if="git"
                     class="action__button"
                     icon="mdi-magnify-plus-outline"
                     @click="openWindow(git)"
                 >
                     SOURCE
-                    <!-- <v-icon>mdi-github-circle</v-icon> -->
                 </div>
                 <div
+                    v-if="demo"
                     class="action__button"
                     icon="mdi-magnify-plus-outline"
                     @click="openWindow(demo)"
                 >
                     DEMO
-                    <!-- <v-icon>mdi-eye-check-outline</v-icon> -->
                 </div>
-                <!-- <app-button
-                    class="action__button second"
-                    icon="mdi-github-circle"
-                    :color="primary"
-                    :onClick="() => { openWindow(git) }"
-                ></app-button>
-                <app-button
-                    class="action__button third"
-                    icon="mdi-eye-outline"
-                    :color="primary"
-                    :onClick="() => { openWindow(demo) }"
-                ></app-button>-->
             </div>
         </div>
     </div>

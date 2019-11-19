@@ -7,7 +7,8 @@
             :to="item.to"
             class="drawer__menu"
             @click.stop="handleClick(item)"
-        >{{item.title}}</a>
+            >{{ item.title }}</a
+        >
 
         <div class="drawer__icon" @click="handleClose">
             <v-icon>mdi-close</v-icon>
@@ -27,13 +28,8 @@ export default {
             this.$emit('close')
         }
     },
-    beforeUpdate() {
-        console.log('beforeUpdate')
-    },
-    mounted() {
-        console.log('mounted')
-        console.log('mounted', this.show)
-    }
+    beforeUpdate() {},
+    mounted() {}
 }
 </script>
 

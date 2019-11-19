@@ -28,6 +28,7 @@
                             SOURCE
                         </div>
                         <div
+                            v-if="p.demo"
                             class="info__btn info__btn--demo"
                             @click="linkTo(p.demo)"
                         >
@@ -162,9 +163,10 @@ export default {
     color: var(--font-grey-2);
 }
 .side-project__item .item__info .info__btns {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 17px;
+    grid-gap: 17px; */
+    display: flex;
     transform: translateY(62px);
     opacity: 0;
     visibility: hidden;
@@ -178,14 +180,10 @@ export default {
     text-align: center;
     color: var(--primary);
 }
-/* .side-project__item .item__info .info__btns .info__btn.info__btn--demo {
-    color: var(--font-grey-1);
-    background: var(--primary);
+
+.side-project__item .item__info .info__btns .info__btn:first-child {
+    margin-right: 12px;
 }
-.side-project__item .item__info .info__btns .info__btn.info__btn--demo:hover {
-    color: var(--primary);
-    background: transparent;
-} */
 .side-project__item .item__info .info__btns .info__btn:hover {
     color: var(--font-grey-1);
     background: var(--primary);

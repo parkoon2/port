@@ -14,7 +14,10 @@
                     </div>
                 </div>
 
-                <img :src="images[currentImageIndex]" :class="[fade ? 'fade-in' : 'fade-out']" />
+                <img
+                    :src="images[currentImageIndex]"
+                    :class="[fade ? 'fade-in' : 'fade-out']"
+                />
 
                 <div class="card__content">
                     <div class="content__header">
@@ -28,7 +31,9 @@
                         <div class="body__tech">
                             <h2 class="body__title dot">Technical sheet</h2>
                             <ul class="tech__list">
-                                <li v-for="tech in item.techs" :key="tech.id">{{ tech }}</li>
+                                <li v-for="tech in item.techs" :key="tech.id">
+                                    {{ tech }}
+                                </li>
                             </ul>
                         </div>
 
@@ -104,7 +109,6 @@ export default {
         document.body.scroll = 'no' // ie only
 
         this.images = this.item.images
-        console.log(this.item)
     },
     beforeDestroy() {
         document.documentElement.style.overflow = 'auto' // firefox, chrome
