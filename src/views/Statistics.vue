@@ -24,7 +24,7 @@
                 ></statistic-card>
             </template>
             <statistic-card
-                data="14"
+                :data="totalProjects"
                 icon="mdi-briefcase"
                 title="PROJECTS"
                 :subtitle="projectFromNow"
@@ -40,6 +40,7 @@
                 data-aos="fade-up"
                 data-aos-delay="300"
             ></statistic-card>
+            {{ page }}
         </div>
     </div>
 </template>
@@ -48,6 +49,8 @@
 import SectionDivider from '@/components/shared/SectionDivider'
 import PageTitle from '@/components/PageTitle'
 import StatisticCard from '@/components/card/StatisticCard'
+
+import { mainProjects } from '../data'
 
 import moment from 'moment'
 
@@ -61,7 +64,7 @@ export default {
             return moment().diff('1990-09-17', 'days')
         },
         projectFromNow() {
-            return `for ${moment().diff('2016-08-10', 'years')} years`
+            return `for ${moment().diff('2016-08-10', 'years')} years in office`
         },
         careerFromNow() {
             return moment().diff('2016-08-10', 'years')
@@ -71,7 +74,8 @@ export default {
     data() {
         return {
             totalRepo: 0,
-            isCountingRepoDone: false
+            isCountingRepoDone: false,
+            totalProjects: mainProjects.length
         }
     },
     methods: {
